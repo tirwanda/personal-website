@@ -9,14 +9,18 @@ export default function Header(props) {
 	};
 
 	return (
-		<Header className="spacing-sm">
+		<header className="spacing-sm">
 			<div className="container">
-				<nav className="navbar navbar-expand-lg navbar-light">
+				<nav className="navbar navbar-expand-lg navbar-dark bg-transparent">
 					<Icon />
 
-					<div className="collaps navbar-collaps">
+					<div className="collapse navbar-collapse">
 						<ul className="navbar-nav ml-auto">
-							<li className={`nav-item${getNavLinkClass('/')}`}>
+							<li
+								className={`underline nav-item${getNavLinkClass(
+									'/'
+								)}`}
+							>
 								<Button
 									className="nav-link"
 									type="link"
@@ -81,6 +85,6 @@ export default function Header(props) {
 					</div>
 				</nav>
 			</div>
-		</Header>
+		</header>
 	);
 }

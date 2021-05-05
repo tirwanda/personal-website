@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Link } from 'react-router-dom';
 import propTypes from 'prop-types';
 
@@ -6,9 +7,10 @@ export default function Button(props) {
 	const className = [props.className];
 
 	if (props.isPrimary) className.push('btn-primary');
-	if (props.isSmall) className.push('btn-sm');
 	if (props.isLarge) className.push('btn-lg');
-	if (props.isBlock) className.push('btn-block');
+	if (props.isLight) className.push('btn-light');
+	if (props.isSmall) className.push('btn-sm');
+	if (props.isBlock) className.push('btn-block justify-content-center');
 	if (props.hasShadow) className.push('btn-shadow');
 
 	const onClick = () => {
@@ -17,12 +19,13 @@ export default function Button(props) {
 
 	if (props.isDisabled || props.isLoading) {
 		if (props.isDisabled) className.push('disabled');
+
 		return (
 			<span className={className.join(' ')} style={props.style}>
 				{props.isLoading ? (
 					<>
-						<span class="spinner-border spinner-border-sm mx-5"></span>
-						<span class="sr-only">Loading..</span>
+						<span className="spinner-border spinner-border-sm mx-5"></span>
+						<span className="sr-only">Loading</span>
 					</>
 				) : (
 					props.children
@@ -63,13 +66,15 @@ export default function Button(props) {
 	}
 
 	return (
-		<button
-			className={className.join(' ')}
-			style={props.style}
-			onClick={onClick}
-		>
-			{props.children}
-		</button>
+		<div>
+			<button
+				className={className.join(' ')}
+				style={props.style}
+				onClick={onClick}
+			>
+				{props.children}
+			</button>
+		</div>
 	);
 }
 
@@ -79,12 +84,13 @@ Button.propTypes = {
 	target: propTypes.string,
 	href: propTypes.string,
 	className: propTypes.string,
+	isPrimary: propTypes.bool,
 	isDisabled: propTypes.bool,
 	isLoading: propTypes.bool,
 	isSmall: propTypes.bool,
+	isLight: propTypes.bool,
 	isLarge: propTypes.bool,
 	isBlock: propTypes.bool,
-	isExternal: propTypes.bool,
-	isPrimary: propTypes.string,
 	hasShadow: propTypes.bool,
+	isExternal: propTypes.bool,
 };

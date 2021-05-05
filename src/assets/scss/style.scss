@@ -5,6 +5,8 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
 @import 'functions';
 @import 'variables';
 @import 'mixins';
@@ -43,19 +45,29 @@
 @import 'utilities';
 @import 'print';
 
+.App {
+	background: $tea;
+}
+
 .brand-text-icon {
-	font-size: 1.625rem;
-	font-weight: 500;
-	font-family: 'Poppins', sans-serif;
 	color: white;
+	font-size: 26px;
+	font-weight: bolder;
+	font-family: 'Gochi Hand', cursive;
+	text-transform: uppercase;
+
+	&:hover {
+		text-decoration: none;
+		color: white;
+	}
 }
 
 .text-crimson {
 	color: crimson;
+	font-weight: bolder;
 }
 
 header {
-	border-bottom: 1px solid $gray-200;
 	width: 100%;
 	position: relative;
 
@@ -65,33 +77,34 @@ header {
 		.navbar-nav {
 			li.nav-item {
 				a {
+					font-family: 'Gochi Hand', cursive;
+					text-transform: uppercase;
+					font-size: 1.25rem;
+
 					&.nav-link {
 						color: white;
 						padding-left: 1rem;
 						padding-right: 1rem;
+					}
 
-						&::after {
-							content: '';
-							position: absolute;
-							left: 0;
-							display: inline-block;
-							height: 1em;
-							width: 100%;
-							border-bottom: 1px solid;
-							margin-top: 10px;
-							opacity: 0;
-							-webkit-transition: opacity 0.35s,
-								-webkit-transform 0.35s;
-							transition: opacity 0.35s, transform 0.35s;
-							-webkit-transform: scale(0, 1);
-							transform: scale(0, 1);
-						}
+					&::before {
+						content: '';
+						position: absolute;
+						display: block;
+						width: 0px;
+						height: 14px;
+						transform: skew(-12deg) translateX(-25%);
+						background: rgba(238, 111, 87, 0.5);
+						z-index: 1;
+						opacity: 0;
+						bottom: 28px;
+						transition: width 0.3s ease-in-out;
+					}
 
-						&:hover {
-							text-decoration: underline;
+					&:hover {
+						&::before {
+							width: 62px;
 							opacity: 1;
-							-webkit-transform: scale(1);
-							transform: scale(1);
 						}
 					}
 				}
