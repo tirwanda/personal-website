@@ -1,12 +1,13 @@
 import React from 'react';
 import Button from 'elements/Button';
-import Icon from 'elements/Icon';
+import Icon from 'parts/BrandIcon';
 
 export default function Header(props) {
 	const getNavLinkClass = (path) => {
-		console.log('propsnya: ', props.location.pathname);
+		console.log('propsnya: ', props);
 		return props.location.pathname === path ? ' active' : '';
 	};
+
 	return (
 		<Header className="spacing-sm">
 			<div className="container">

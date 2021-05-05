@@ -43,6 +43,17 @@
 @import 'utilities';
 @import 'print';
 
+.brand-text-icon {
+	font-size: 1.625rem;
+	font-weight: 500;
+	font-family: 'Poppins', sans-serif;
+	color: white;
+}
+
+.text-crimson {
+	color: crimson;
+}
+
 header {
 	border-bottom: 1px solid $gray-200;
 	width: 100%;
