@@ -46,7 +46,7 @@
 @import 'print';
 
 .App {
-	background: $tea;
+	background: $teal !important;
 }
 
 .brand-text-icon {
@@ -67,9 +67,15 @@
 	font-weight: bolder;
 }
 
+.menu-icon {
+	display: none;
+}
+
 header {
 	width: 100%;
 	position: relative;
+	position: fixed;
+	// background: $teal;
 
 	.navbar {
 		height: 5rem;
@@ -82,7 +88,7 @@ header {
 					font-size: 1.25rem;
 
 					&.nav-link {
-						color: white;
+						color: black;
 						padding-left: 1rem;
 						padding-right: 1rem;
 					}
@@ -109,6 +115,58 @@ header {
 					}
 				}
 			}
+		}
+	}
+}
+
+@media screen and (max-width: 990px) {
+	.menu-icon {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		transform: translate(-100%, 60%);
+		font-size: 1.8rem;
+		cursor: pointer;
+	}
+
+	.navbar {
+		position: relative;
+
+		.navbar-nav {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			position: absolute;
+			top: 80px;
+			left: -100%;
+			opacity: 0;
+			transition: all 0.5s ease;
+
+			li.nav-item {
+				position: relative;
+				text-align: center;
+				padding: 2rem;
+				width: 100%;
+				display: table;
+
+				a {
+					&::before {
+						left: 306px;
+						top: 51px;
+						transition: width 0.3s ease-in-out;
+					}
+				}
+			}
+		}
+
+		.navbar-nav.active {
+			background: $tea;
+			left: 0;
+			opacity: 1;
+			border-radius: 3px;
+			transition: all 0.5s ease;
+			z-index: 1;
 		}
 	}
 }
