@@ -38,6 +38,7 @@ export default function Button(props) {
 		if (props.isExternal) {
 			return (
 				<a
+					ref={props.reff}
 					href={props.href}
 					className={className.join(' ')}
 					style={props.style}
@@ -55,6 +56,7 @@ export default function Button(props) {
 		} else {
 			return (
 				<Link
+					ref={props.reff}
 					to={props.href}
 					className={className.join(' ')}
 					style={props.style}
@@ -69,6 +71,7 @@ export default function Button(props) {
 	return (
 		<div>
 			<button
+				ref={props.reff}
 				className={className.join(' ')}
 				style={props.style}
 				onClick={onClick}

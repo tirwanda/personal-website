@@ -1,87 +1,77 @@
-import React, { useState } from 'react';
-import Button from 'elements/Button';
-import Icon from 'parts/BrandIcon';
+import React, { useState, useEffect } from 'react';
+import { withRouter } from 'react-router-dom';
+import BrandIcon from 'parts/BrandIcon';
+import Hamburger from 'parts/Hamburger';
 
-export default function Header(props) {
-	const [clicked, setClicked] = useState(false);
+function Header({ history }) {
+	// State for menu button
+	const [state, setState] = useState({
+		initial: false,
+		clicked: null,
+		menuName: 'Menu',
+	});
 
-	const getNavLinkClass = (path) => {
-		console.log('propsnya: ', props);
-		return props.location.pathname === path ? ' active' : '';
+	// State for disabled button
+	const [disabled, setDisabled] = useState(false);
+
+	// State for page changes
+	useEffect(() => {
+		history.listen(() => {
+			setState({
+				clicked: false,
+				menuName: 'Menu',
+			});
+		});
+	});
+
+	const handleMenu = () => {
+		disableMenu();
+		if (state.initial === false) {
+			setState({
+				initial: null,
+				clicked: true,
+				menuName: 'Close',
+			});
+		} else if (state.clicked === true) {
+			setState({
+				clicked: !state.clicked,
+				menuName: 'Menu',
+			});
+		} else if (state.clicked === false) {
+			setState({
+				clicked: !state.clicked,
+				menuName: 'Close',
+			});
+		}
 	};
 
-	const handleClick = () => {
-		setClicked(!clicked);
+	const disableMenu = () => {
+		setDisabled(!disabled);
+		setTimeout(() => {
+			setDisabled(false);
+		}, 1200);
 	};
 
 	return (
-		<header className="spacing-sm">
+		<header>
 			<div className="container">
-				<nav className="navbar navbar-expand-lg navbar-dark bg-transparent">
-					<Icon />
-					<ul
-						className={
-							clicked
-								? 'navbar-nav ml-auto active'
-								: 'navbar-nav ml-auto'
-						}
-					>
-						<li className={`nav-item${getNavLinkClass('/')}`}>
-							<Button className="nav-link" type="link" href="/">
-								Home
-							</Button>
-						</li>
-						<li
-							className={`nav-item${getNavLinkClass(
-								'/portfolio'
-							)}`}
-						>
-							<Button
-								className="nav-link"
-								type="link"
-								href="/portfolio"
-							>
-								Portfolio
-							</Button>
-						</li>
-						<li className={`nav-item${getNavLinkClass('/about')}`}>
-							<Button
-								className="nav-link"
-								type="link"
-								href="/about"
-							>
-								About me
-							</Button>
-						</li>
-						<li className={`nav-item${getNavLinkClass('/skill')}`}>
-							<Button
-								className="nav-link"
-								type="link"
-								href="/skill"
-							>
-								Skills
-							</Button>
-						</li>
-						<li
-							className={`nav-item${getNavLinkClass('/contact')}`}
-						>
-							<Button
-								className="nav-link"
-								type="link"
-								href="/contact"
-							>
-								Contact
-							</Button>
-						</li>
-					</ul>
+				<div className="wrapper">
+					<div className="inner-header">
+						<div className="logo">
+							<BrandIcon />
+						</div>
 
-					<div className="menu-icon" onClick={handleClick}>
-						<i
-							className={clicked ? 'fas fa-times' : 'fas fa-bars'}
-						></i>
+						<div className="menu">
+							<button disabled={disabled} onClick={handleMenu}>
+								{state.menuName}
+							</button>
+						</div>
 					</div>
-				</nav>
+				</div>
 			</div>
+			<Hamburger state={state} />
 		</header>
 	);
 }
+
+export default withRouter(Header);

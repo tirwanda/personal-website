@@ -5,7 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
-@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,600,800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
 @import 'functions';
 @import 'variables';
@@ -45,128 +45,184 @@
 @import 'utilities';
 @import 'print';
 
-.App {
-	background: $teal !important;
-}
+.container {
+	.wrapper {
+		padding: 0 3rem;
 
-.brand-text-icon {
-	color: white;
-	font-size: 26px;
-	font-weight: bolder;
-	font-family: 'Gochi Hand', cursive;
-	text-transform: uppercase;
+		.home {
+			display: flex;
+			justify-content: center;
+			height: 100%;
+			width: 100%;
 
-	&:hover {
-		text-decoration: none;
-		color: white;
+			p {
+				font-size: 0.75rem;
+				letter-spacing: 0.3rem;
+				text-transform: uppercase;
+				font-weight: 500;
+			}
+
+			h5 {
+				margin-top: 260px;
+				font-size: 1.5rem;
+				font-weight: 600;
+				padding-right: 200px;
+			}
+		}
 	}
 }
 
-.text-crimson {
-	color: crimson;
-	font-weight: bolder;
-}
-
-.menu-icon {
-	display: none;
-}
-
+// =============================== Header ===============================
 header {
-	width: 100%;
-	position: relative;
-	position: fixed;
-	// background: $teal;
+	height: 100px;
 
-	.navbar {
-		height: 5rem;
+	.inner-header {
+		position: relative;
+		z-index: 10;
+		height: 100px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 
-		.navbar-nav {
-			li.nav-item {
-				a {
-					font-family: 'Gochi Hand', cursive;
-					text-transform: uppercase;
-					font-size: 1.25rem;
+		.logo a {
+			font-weight: 700;
+			color: $black;
+		}
 
-					&.nav-link {
-						color: black;
-						padding-left: 1rem;
-						padding-right: 1rem;
-					}
+		.menu {
+			button {
+				border: none;
+				background: none;
+				outline: none;
+				cursor: pointer;
+				font-size: 0.8rem;
+				color: black;
+			}
+		}
+	}
 
-					&::before {
-						content: '';
-						position: absolute;
+	// ================= Hamburger Menu =================
+	.hamburger-menu {
+		display: none;
+		z-index: 9;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+
+		.menu-secondary-background-color {
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			background-color: $black;
+		}
+
+		.menu-layer {
+			position: relative;
+			background-color: $red;
+			height: 100%;
+			overflow: hidden;
+
+			.menu-picture-background {
+				top: 0;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				opacity: 0;
+			}
+
+			.wrapper {
+				position: relative;
+
+				.menu-links {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					position: relative;
+					top: 200px;
+
+					nav {
 						display: block;
-						width: 0px;
-						height: 14px;
-						transform: skew(-12deg) translateX(-25%);
-						background: rgba(238, 111, 87, 0.5);
-						z-index: 1;
-						opacity: 0;
-						bottom: 28px;
-						transition: width 0.3s ease-in-out;
+
+						ul {
+							padding: 0;
+							margin: 0;
+
+							li {
+								list-style: none;
+								font-size: 3.5rem;
+								height: 70px;
+								overflow: hidden;
+								position: relative;
+								width: 700px;
+								cursor: pointer;
+
+								a {
+									position: absolute;
+									color: $white;
+									text-decoration: none;
+
+									&:hover {
+										color: $black;
+									}
+								}
+							}
+						}
 					}
 
-					&:hover {
-						&::before {
-							width: 62px;
-							opacity: 1;
+					.info {
+						color: $white;
+						width: 300px;
+
+						h3 {
+							font-size: 1.2rem;
+							margin: 0.5rem auto;
+						}
+
+						p {
+							margin: 0 auto;
+							font-size: 0.8rem;
+						}
+					}
+
+					.achievement {
+						position: absolute;
+						bottom: -80%;
+						color: $white;
+						margin-top: 1rem;
+						font-size: 0.8rem;
+						font-weight: 600;
+
+						span {
+							&:first-child {
+								margin-left: 4rem;
+							}
+
+							font-weight: 400;
+							cursor: pointer;
+							margin: 0 2rem;
+							transition: 0.3s ease-in-out;
+
+							&:hover {
+								background-color: $black;
+								padding: 0.5rem 1.2rem;
+								border-radius: 4px;
+							}
 						}
 					}
 				}
 			}
-		}
-	}
-}
-
-@media screen and (max-width: 990px) {
-	.menu-icon {
-		display: block;
-		position: absolute;
-		top: 0;
-		right: 0;
-		transform: translate(-100%, 60%);
-		font-size: 1.8rem;
-		cursor: pointer;
-	}
-
-	.navbar {
-		position: relative;
-
-		.navbar-nav {
-			display: flex;
-			flex-direction: column;
-			width: 100%;
-			position: absolute;
-			top: 80px;
-			left: -100%;
-			opacity: 0;
-			transition: all 0.5s ease;
-
-			li.nav-item {
-				position: relative;
-				text-align: center;
-				padding: 2rem;
-				width: 100%;
-				display: table;
-
-				a {
-					&::before {
-						left: 306px;
-						top: 51px;
-						transition: width 0.3s ease-in-out;
-					}
-				}
-			}
-		}
-
-		.navbar-nav.active {
-			background: $tea;
-			left: 0;
-			opacity: 1;
-			border-radius: 3px;
-			transition: all 0.5s ease;
-			z-index: 1;
 		}
 	}
 }
