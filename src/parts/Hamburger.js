@@ -2,6 +2,20 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import Button from 'elements/Button';
 
+import elforza16 from 'assets/images/elforza16.jpg';
+import elforza17 from 'assets/images/elforza17.jpg';
+import elforza18 from 'assets/images/elforza18.jpg';
+import pimnas from 'assets/images/pimnas.jpg';
+import myTeam from 'assets/images/myTeam.jpg';
+
+const achievement = [
+	{ name: 'KRI 2016', image: elforza16 },
+	{ name: 'KRI 2017', image: elforza17 },
+	{ name: 'KRI 2018', image: elforza18 },
+	{ name: 'PIMNAS', image: pimnas },
+	{ name: 'My Team', image: myTeam },
+];
+
 export default function Hamburger({ state }) {
 	// Vars for Dom nodes
 	let menu = useRef(null);
@@ -84,6 +98,51 @@ export default function Hamburger({ state }) {
 		});
 	};
 
+	const handleAchievment = (achievement) => {
+		gsap.to(pictureBackground, {
+			duration: 0,
+			background: `url(${achievement}) no-repeat center center fixed`,
+			backgroundSize: 'cover',
+			height: '100%',
+		});
+		gsap.to(pictureBackground, {
+			duration: 0.4,
+			opacity: 1,
+			ease: 'power3.inOut',
+		});
+		gsap.from(pictureBackground, {
+			duration: 0.4,
+			skewY: 2,
+			ease: 'power3.inOut',
+			transformOrigin: 'right top',
+		});
+	};
+
+	const handleAchievmentReturn = () => {
+		gsap.to(pictureBackground, {
+			duration: 0.4,
+			opacity: 0,
+		});
+	};
+
+	const handleHover = (e) => {
+		gsap.to(e.target, {
+			duration: 0.3,
+			y: 3,
+			skewX: 4,
+			ease: 'power3.inOut',
+		});
+	};
+
+	const handleHoverExit = (e) => {
+		gsap.to(e.target, {
+			duration: 0.3,
+			y: -3,
+			skewX: 0,
+			ease: 'power3.inOut',
+		});
+	};
+
 	return (
 		<div ref={(el) => (menu = el)} className="hamburger-menu">
 			<div
@@ -91,7 +150,10 @@ export default function Hamburger({ state }) {
 				className="menu-secondary-background-color"
 			></div>
 			<div ref={(el) => (revealMenu = el)} className="menu-layer">
-				<div className="menu-picture-background"></div>
+				<div
+					ref={(el) => (pictureBackground = el)}
+					className="menu-picture-background"
+				></div>
 				<div className="container">
 					<div className="wrapper">
 						<div className="menu-links">
@@ -99,6 +161,8 @@ export default function Hamburger({ state }) {
 								<ul>
 									<li>
 										<Button
+											hoverEnter={(e) => handleHover(e)}
+											hoverOut={(e) => handleHoverExit(e)}
 											reff={(el) => (line1 = el)}
 											className=""
 											href="/resume"
@@ -109,6 +173,8 @@ export default function Hamburger({ state }) {
 									</li>
 									<li>
 										<Button
+											hoverEnter={(e) => handleHover(e)}
+											hoverOut={(e) => handleHoverExit(e)}
 											reff={(el) => (line2 = el)}
 											className=""
 											href="/portfolio"
@@ -119,6 +185,8 @@ export default function Hamburger({ state }) {
 									</li>
 									<li>
 										<Button
+											hoverEnter={(e) => handleHover(e)}
+											hoverOut={(e) => handleHoverExit(e)}
 											reff={(el) => (line3 = el)}
 											className=""
 											href="/skills"
@@ -139,11 +207,18 @@ export default function Hamburger({ state }) {
 								</p>
 							</div>
 							<div className="achievement">
-								Achievement:
-								<span> KRI 2016</span>
-								<span> KRI 2017</span>
-								<span> PIMNAS</span>
-								<span> KRI 2018</span>
+								Achievement :
+								{achievement.map((el) => (
+									<span
+										key={el.name}
+										onMouseEnter={() =>
+											handleAchievment(el.image)
+										}
+										onMouseOut={handleAchievmentReturn}
+									>
+										{el.name}
+									</span>
+								))}
 							</div>
 						</div>
 					</div>

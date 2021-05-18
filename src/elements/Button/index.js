@@ -56,6 +56,8 @@ export default function Button(props) {
 		} else {
 			return (
 				<Link
+					onMouseEnter={props.hoverEnter}
+					onMouseOut={props.hoverOut}
 					ref={props.reff}
 					to={props.href}
 					className={className.join(' ')}
@@ -71,6 +73,8 @@ export default function Button(props) {
 	return (
 		<div>
 			<button
+				onMouseEnter={props.hoverEnter}
+				onMouseOut={props.hoverOut}
 				ref={props.reff}
 				className={className.join(' ')}
 				style={props.style}
