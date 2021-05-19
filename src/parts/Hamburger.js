@@ -8,6 +8,17 @@ import elforza18 from 'assets/images/elforza18.jpg';
 import pimnas from 'assets/images/pimnas.jpg';
 import myTeam from 'assets/images/myTeam.jpg';
 
+import {
+	staggerReveal,
+	fadeInUp,
+	staggerText,
+	staggerRevealClose,
+	handleAchievment,
+	handleAchievmentReturn,
+	handleHover,
+	handleHoverExit,
+} from 'parts/Animation';
+
 const achievement = [
 	{ name: 'KRI 2016', image: elforza16 },
 	{ name: 'KRI 2017', image: elforza17 },
@@ -29,14 +40,7 @@ export default function Hamburger({ state }) {
 
 	useEffect(() => {
 		if (state.clicked === false) {
-			gsap.to([revealMenu, revealMenuBackground], {
-				duration: 0.8,
-				height: 0,
-				ease: 'power3.inOut',
-				stagger: {
-					amount: 0.07,
-				},
-			});
+			staggerRevealClose(revealMenu, revealMenuBackground);
 
 			gsap.to(menu, {
 				duration: 1,
@@ -62,86 +66,6 @@ export default function Hamburger({ state }) {
 			staggerText(line1, line2, line3);
 		}
 	}, [state]);
-
-	const staggerReveal = (node1, node2) => {
-		gsap.from([node1, node2], {
-			duration: 0.8,
-			height: 0,
-			transformOrigin: 'right top',
-			skewY: 2,
-			ease: 'power3.inOut',
-			stagger: {
-				amount: 0.1,
-			},
-		});
-	};
-
-	const fadeInUp = (node1) => {
-		gsap.from(node1, {
-			y: 60,
-			duration: 1,
-			delay: 0.2,
-			opacity: 0,
-			ease: 'power3.inOut',
-		});
-	};
-
-	const staggerText = (node1, node2, node3) => {
-		gsap.from([node1, node2, node3], {
-			y: 100,
-			duration: 0.8,
-			delay: 0.2,
-			ease: 'power3.inOut',
-			stagger: {
-				amount: 0.5,
-			},
-		});
-	};
-
-	const handleAchievment = (achievement) => {
-		gsap.to(pictureBackground, {
-			duration: 0,
-			background: `url(${achievement}) no-repeat center center fixed`,
-			backgroundSize: 'cover',
-			height: '100%',
-		});
-		gsap.to(pictureBackground, {
-			duration: 0.4,
-			opacity: 1,
-			ease: 'power3.inOut',
-		});
-		gsap.from(pictureBackground, {
-			duration: 0.4,
-			skewY: 2,
-			ease: 'power3.inOut',
-			transformOrigin: 'right top',
-		});
-	};
-
-	const handleAchievmentReturn = () => {
-		gsap.to(pictureBackground, {
-			duration: 0.4,
-			opacity: 0,
-		});
-	};
-
-	const handleHover = (e) => {
-		gsap.to(e.target, {
-			duration: 0.3,
-			y: 3,
-			skewX: 4,
-			ease: 'power3.inOut',
-		});
-	};
-
-	const handleHoverExit = (e) => {
-		gsap.to(e.target, {
-			duration: 0.3,
-			y: -3,
-			skewX: 0,
-			ease: 'power3.inOut',
-		});
-	};
 
 	return (
 		<div ref={(el) => (menu = el)} className="hamburger-menu">
@@ -212,9 +136,16 @@ export default function Hamburger({ state }) {
 									<span
 										key={el.name}
 										onMouseEnter={() =>
-											handleAchievment(el.image)
+											handleAchievment(
+												el.image,
+												pictureBackground
+											)
 										}
-										onMouseOut={handleAchievmentReturn}
+										onMouseOut={() =>
+											handleAchievmentReturn(
+												pictureBackground
+											)
+										}
 									>
 										{el.name}
 									</span>
