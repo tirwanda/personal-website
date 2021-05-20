@@ -86,7 +86,8 @@ header {
 
 		.logo a {
 			font-weight: 700;
-			color: $black;
+			color: $white;
+			text-decoration: none;
 		}
 
 		.menu {
@@ -96,7 +97,8 @@ header {
 				outline: none;
 				cursor: pointer;
 				font-size: 0.8rem;
-				color: black;
+				font-weight: 400;
+				color: $white;
 			}
 		}
 	}
@@ -251,5 +253,105 @@ header {
 
 	100% {
 		background-position: 0% 0%;
+	}
+}
+
+// ==================== Home Section ====================
+.container {
+	// width: 100vh;
+	.hero {
+		width: 100%;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.hero-heading {
+			font-size: 2rem;
+			margin-bottom: -4rem;
+			position: absolute;
+			top: 12%;
+
+			span {
+				display: inline-block;
+				width: 100%;
+			}
+
+			.hero-name {
+				font-size: 2.5rem;
+				font-family: 'Poppins';
+				font-weight: 700;
+			}
+		}
+
+		.hero-img {
+			height: 100%;
+			align-items: center;
+			justify-content: center;
+			margin: 0 auto;
+			border: 2px solid #dcdcdc;
+			margin-top: 5%;
+			border-radius: 10px;
+
+			img {
+				width: 100%;
+				border-radius: 7px;
+			}
+		}
+		.hero-info {
+			max-width: 500px;
+			margin: 0 auto;
+			font-size: 1.8rem;
+			line-height: 1.3rem;
+			position: absolute;
+			bottom: 10%;
+
+			p {
+				font-size: 0.75rem;
+				letter-spacing: 0.1rem !important;
+				text-transform: none !important;
+				font-weight: 500;
+				font-family: 'Poppins';
+			}
+
+			.button {
+				margin-top: 0.2rem;
+				padding: 0.7em 1em;
+				border-radius: 0.5rem;
+				display: inline-block;
+				background-color: #dcdcdc;
+				border: 2px solid #dcdcdc;
+				transition: 0.3s all ease-in-out;
+				&:hover {
+					background-color: transparent;
+					color: #dcdcdc;
+				}
+			}
+
+			.button-transparent {
+				margin-top: 2rem;
+				padding: 0.7em 1em;
+				border-radius: 0.5rem;
+				display: inline-block;
+				background-color: transparent;
+				color: #dcdcdc;
+				border: 2px solid #dcdcdc;
+			}
+
+			a {
+				text-decoration: none;
+				font-size: 1.2rem;
+				color: #404040;
+				text-transform: lowercase;
+			}
+
+			@media only screen and (max-width: 768px) {
+				font-size: 1.4rem;
+
+				.button {
+					font-size: 1.2rem;
+				}
+			}
+		}
 	}
 }
