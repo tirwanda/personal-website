@@ -212,7 +212,7 @@ header {
 
 					.achievement {
 						position: absolute;
-						bottom: -80%;
+						bottom: -30%;
 						color: $white;
 						margin-top: 1rem;
 						font-size: 0.8rem;
@@ -331,6 +331,128 @@ header {
 
 			.typed-text {
 				font-size: 1rem;
+			}
+		}
+	}
+}
+
+// ==================== About Section ====================
+
+.about {
+	height: 100vh;
+	width: 100vw;
+	background-color: #000000;
+	background-image: linear-gradient(315deg, #000000 0%, #7f8c8d 74%);
+
+	.wrapper {
+		.container {
+			align-items: center;
+			display: flex;
+			justify-content: flex-start;
+			text-align: center;
+
+			.about-left {
+				flex: 1;
+				text-align: left;
+
+				p {
+					font-family: 'Gochi Hand', cursive;
+				}
+				.about-btn {
+					display: flex;
+					align-items: center;
+					justify-content: flex-start;
+
+					.btn-works {
+						border: 1px solid orange;
+						background-color: orange;
+						border-radius: 7px;
+						padding: 0.625rem 0.75rem;
+						color: $white;
+						margin-top: 2rem;
+						margin-right: 1rem;
+						transition: 0.3s all ease-in-out;
+
+						&:hover {
+							background-color: transparent;
+							color: orange;
+						}
+					}
+
+					.btn-read {
+						border: 1px solid orange;
+						background-color: transparent;
+						border-radius: 7px;
+						padding: 0.625rem 0.75rem;
+						color: orange;
+						margin-top: 2rem;
+						transition: 0.3s all ease-in-out;
+
+						&:hover {
+							background-color: orange;
+							color: $white;
+						}
+					}
+				}
+			}
+
+			.about-right {
+				flex: 1;
+				overflow: hidden;
+
+				img {
+					width: 40%;
+					overflow: hidden;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 950px) {
+		.wrapper {
+			.container {
+				.about-left {
+					flex: 4;
+				}
+
+				.about-right {
+					flex: 3;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 768px) {
+		height: 100%;
+		.wrapper {
+			.container {
+				flex-direction: column;
+				text-align: center;
+
+				.about-right,
+				.about-left {
+					width: 100%;
+				}
+
+				.about-left {
+					text-align: center;
+					.about-btn {
+						justify-content: center;
+						flex-direction: column;
+
+						.btn-works,
+						.btn-read {
+							margin: 0.5rem 0;
+						}
+
+						a {
+							width: 100%;
+						}
+					}
+					p {
+						margin: 0 auto;
+					}
+				}
 			}
 		}
 	}

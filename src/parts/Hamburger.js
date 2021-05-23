@@ -36,6 +36,7 @@ export default function Hamburger({ state }) {
 	let line1 = useRef(null);
 	let line2 = useRef(null);
 	let line3 = useRef(null);
+	let line4 = useRef(null);
 	let info = useRef(null);
 
 	useEffect(() => {
@@ -63,7 +64,7 @@ export default function Hamburger({ state }) {
 
 			staggerReveal(revealMenuBackground, revealMenu);
 			fadeInUp(info);
-			staggerText(line1, line2, line3);
+			staggerText(line1, line2, line3, line4);
 		}
 	}, [state]);
 
@@ -89,6 +90,18 @@ export default function Hamburger({ state }) {
 											hoverOut={(e) => handleHoverExit(e)}
 											reff={(el) => (line1 = el)}
 											className=""
+											href="/about"
+											type="link"
+										>
+											About Me
+										</Button>
+									</li>
+									<li>
+										<Button
+											hoverEnter={(e) => handleHover(e)}
+											hoverOut={(e) => handleHoverExit(e)}
+											reff={(el) => (line2 = el)}
+											className=""
 											href="/resume"
 											type="link"
 										>
@@ -99,7 +112,7 @@ export default function Hamburger({ state }) {
 										<Button
 											hoverEnter={(e) => handleHover(e)}
 											hoverOut={(e) => handleHoverExit(e)}
-											reff={(el) => (line2 = el)}
+											reff={(el) => (line3 = el)}
 											className=""
 											href="/portfolio"
 											type="link"
@@ -111,7 +124,7 @@ export default function Hamburger({ state }) {
 										<Button
 											hoverEnter={(e) => handleHover(e)}
 											hoverOut={(e) => handleHoverExit(e)}
-											reff={(el) => (line3 = el)}
+											reff={(el) => (line4 = el)}
 											className=""
 											href="/skills"
 											type="link"

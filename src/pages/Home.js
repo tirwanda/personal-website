@@ -32,7 +32,7 @@ export default function Home() {
 			<div className="main-info">
 				<h3>Hello, my name is</h3>
 				<h1>Edho Dwi Tirwanda</h1>
-				<div class="text-3">
+				<div className="text-3">
 					And I'm a{' '}
 					<Typed
 						className="typed-text"
