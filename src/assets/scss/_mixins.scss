@@ -1,47 +1,26 @@
-// Toggles
-//
-// Used in conjunction with global variables to enable certain theme features.
+@media (min-width: 64em) {
+}
 
-// Vendor
-@import "vendor/rfs";
+$breakpoints-up: (
+	'medium': '40em',
+	'large': '64em',
+	'xlarge': '87.5em',
+);
 
-// Deprecate
-@import "mixins/deprecate";
+$breakpoints-down: (
+	'small': '57.1875em',
+	'medium': '66.357em',
+	'large': '87.4375',
+);
 
-// Utilities
-@import "mixins/breakpoints";
-@import "mixins/hover";
-@import "mixins/image";
-@import "mixins/badge";
-@import "mixins/resize";
-@import "mixins/screen-reader";
-@import "mixins/size";
-@import "mixins/reset-text";
-@import "mixins/text-emphasis";
-@import "mixins/text-hide";
-@import "mixins/text-truncate";
-@import "mixins/visibility";
+@mixin breakpoint-up($size) {
+	@media (min-width: map-get($breakpoints-up, $size)) {
+		@content;
+	}
+}
 
-// Components
-@import "mixins/alert";
-@import "mixins/buttons";
-@import "mixins/caret";
-@import "mixins/pagination";
-@import "mixins/lists";
-@import "mixins/list-group";
-@import "mixins/nav-divider";
-@import "mixins/forms";
-@import "mixins/table-row";
-
-// Skins
-@import "mixins/background-variant";
-@import "mixins/border-radius";
-@import "mixins/box-shadow";
-@import "mixins/gradients";
-@import "mixins/transition";
-
-// Layout
-@import "mixins/clearfix";
-@import "mixins/grid-framework";
-@import "mixins/grid";
-@import "mixins/float";
+@mixin breakpoint-down($size) {
+	@media (max-width: map-get($breakpoints-down, $size)) {
+		@content;
+	}
+}
