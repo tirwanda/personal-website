@@ -5,7 +5,7 @@ import './hero.scss';
 
 import Button from 'elements/Button';
 import Header from 'parts/header/Header';
-import SocialContact from 'parts/social-contact/SocialContact';
+import SocialContact from 'elements/social-contact/SocialContact';
 
 export default function Hero() {
 	return (
