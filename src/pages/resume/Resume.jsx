@@ -6,14 +6,15 @@ import ResumeHeader from 'parts/resume-header/ResumeHeader';
 import ResumePortfolio from 'section/resume-portfolio/ResumePortfolio';
 import ResumeProfile from 'parts/resume-profile/ResumeProfile';
 import React from 'react';
+import './resume.scss';
 import Cv from 'section/resume-cv/ResumeCv';
 
 function Resume() {
 	return (
-		<div>
+		<div className="resume">
 			<Container>
 				<Grid container>
-					<Grid item xs={12} sm={12} md={4} lg={3}>
+					<Grid item xs={12} sm={12} md={2} lg={2}>
 						<ResumeProfile />
 					</Grid>
 					<Grid item xs>

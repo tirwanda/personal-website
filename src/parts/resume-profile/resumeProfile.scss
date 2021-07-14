@@ -1,0 +1,32 @@
+.profile {
+	background-color: white;
+	border-radius: 6px;
+	width: 100%;
+	display: inline-block;
+
+	&-name {
+		line-height: 18px;
+		padding: 20px;
+
+		& .name {
+			text-transform: uppercase;
+			font-size: 17px;
+			font-weight: bold;
+		}
+
+		& .title {
+			font-size: 13px;
+			color: #777;
+		}
+	}
+
+	&-img {
+		margin-top: -10px;
+		-webkit-clip-path: polygon(0 9%, 100% 0, 100% 94%, 0% 100%);
+		clip-path: polygon(0 9%, 100% 0, 100% 94%, 0% 100%);
+
+		img {
+			width: 100%;
+		}
+	}
+}
