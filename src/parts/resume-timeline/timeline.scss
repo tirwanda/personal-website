@@ -1,0 +1,46 @@
+.timeline {
+	padding: 0 !important;
+
+	.MuiTimelineSeparator-root {
+		min-height: 0px;
+	}
+
+	.MuiTimelineConnector-root {
+		background-color: #eee !important;
+	}
+
+	.MuiTimelineItem-missingOppositeContent::before {
+		display: none;
+	}
+
+	&-first {
+		min-height: 80px !important;
+
+		.timeline-dot-header {
+			color: black;
+			background-color: #ffc500;
+			font-size: small;
+
+			& > .MuiSvgIcon-root {
+				font-size: 20px;
+				color: darkslategray;
+			}
+		}
+
+		.timeline-header {
+			padding-top: 7px;
+		}
+	}
+
+	&-content {
+		.timeline-padding {
+			padding-left: 10px !important;
+
+			.timeline-dot {
+				color: black;
+				border-color: #ffc500;
+				font-size: small;
+			}
+		}
+	}
+}
