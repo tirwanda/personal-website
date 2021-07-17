@@ -14,7 +14,7 @@ function Resume() {
 		<div className="resume">
 			<Container>
 				<Grid container>
-					<Grid item xs={12} sm={12} md={2} lg={2}>
+					<Grid item xs={12} sm={12} md={3} lg={3}>
 						<ResumeProfile />
 					</Grid>
 					<Grid item xs>

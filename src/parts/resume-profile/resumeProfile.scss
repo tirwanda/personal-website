@@ -10,7 +10,7 @@
 
 		& .name {
 			text-transform: uppercase;
-			font-size: 17px;
+			font-size: 15px;
 			font-weight: bold;
 		}
 
@@ -28,5 +28,11 @@
 		img {
 			width: 100%;
 		}
+	}
+
+	&-information {
+		top: 0;
+		left: 0;
+		margin: -40px 10px 30px;
 	}
 }
