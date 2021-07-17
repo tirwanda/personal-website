@@ -4,6 +4,9 @@
 	.MuiTimelineSeparator-root {
 		min-height: 0px;
 	}
+	.MuiTimelineItem-root {
+		min-height: 40px;
+	}
 
 	.MuiTimelineConnector-root {
 		background-color: #eee !important;
@@ -12,9 +15,12 @@
 	.MuiTimelineItem-missingOppositeContent::before {
 		display: none;
 	}
+	.MuiTimelineContent-root {
+		padding: 3px 9px !important;
+	}
 
 	&-first {
-		min-height: 80px !important;
+		min-height: 70px !important;
 
 		.timeline-dot-header {
 			color: black;
@@ -32,15 +38,33 @@
 		}
 	}
 
-	&-content {
-		.timeline-padding {
-			padding-left: 10px !important;
+	.timeline-padding {
+		padding-left: 10px !important;
 
-			.timeline-dot {
-				color: black;
-				border-color: #ffc500;
-				font-size: small;
-			}
+		.timeline-dot {
+			color: black;
+			border-color: #ffc500;
+			font-size: small;
+		}
+	}
+
+	.content {
+		font-size: 13px !important;
+		margin-top: 2px;
+		margin-bottom: 12px;
+
+		a {
+			text-decoration: none;
+			color: #777;
+			font-size: 13px;
+		}
+
+		.text {
+			color: #777;
+		}
+
+		.title {
+			color: black;
 		}
 	}
 }

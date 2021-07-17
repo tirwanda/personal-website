@@ -1,8 +1,6 @@
 import React from 'react';
 import './timeline.scss';
 
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
-
 import Timeline from '@material-ui/lab/Timeline';
 import TimelineItem from '@material-ui/lab/TimelineItem';
 import TimelineSeparator from '@material-ui/lab/TimelineSeparator';
@@ -17,7 +15,7 @@ const ResumeTimeline = ({ title, icon, children }) => {
 			<TimelineItem className={'timeline-first'}>
 				<TimelineSeparator>
 					<TimelineDot className={'timeline-dot-header'}>
-						{<AccountCircleIcon />}
+						{icon}
 					</TimelineDot>
 					<TimelineConnector />
 				</TimelineSeparator>
@@ -27,13 +25,7 @@ const ResumeTimeline = ({ title, icon, children }) => {
 					</Typography>
 				</TimelineContent>
 			</TimelineItem>
-
 			{children}
-
-			<TimelineItem className="timeline-content">
-				<CustomTimelineSeparator />
-				<TimelineContent>Code</TimelineContent>
-			</TimelineItem>
 		</Timeline>
 	);
 };
