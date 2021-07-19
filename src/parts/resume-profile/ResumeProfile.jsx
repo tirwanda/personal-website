@@ -2,14 +2,14 @@ import { Typography } from '@material-ui/core';
 import React from 'react';
 import './resumeProfile.scss';
 
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
-
-import Button from 'elements/Button';
+import Button from 'elements/resume-button/ResumeButton';
 import CustomeTimeline, {
 	CustomTimelineSeparator,
 } from 'parts/resume-timeline/ResumeTimeline';
 import Profile from 'assets/images/profile.jpg';
 
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import GetAppIcon from '@material-ui/icons/GetApp';
 import resumeData from 'util/resumeData';
 import TimelineItem from '@material-ui/lab/TimelineItem';
 import TimelineContent from '@material-ui/lab/TimelineContent';
@@ -67,8 +67,14 @@ function ResumeProfile() {
 						/>
 					))}
 				</CustomeTimeline>
-				<br />
-				<Button>Download Cv</Button>
+
+				<div className="btn-container">
+					<Button
+						className="btn-download"
+						text="Download CV"
+						icon={<GetAppIcon />}
+					></Button>
+				</div>
 			</div>
 		</div>
 	);

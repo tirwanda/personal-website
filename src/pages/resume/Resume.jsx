@@ -11,9 +11,9 @@ import Cv from 'section/resume-cv/ResumeCv';
 
 function Resume() {
 	return (
-		<div className="resume">
+		<div className="resume top-60">
 			<Container>
-				<Grid container>
+				<Grid container spacing={7}>
 					<Grid item xs={12} sm={12} md={3} lg={3}>
 						<ResumeProfile />
 					</Grid>

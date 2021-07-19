@@ -12,25 +12,25 @@ const data = {
 	phone: '+6285889644070',
 
 	socials: {
-		facebook: {
+		Facebook: {
 			link: 'https://web.facebook.com/tirwanda.edho/',
 			username: 'Tirwanda Edho',
 			icon: <FacebookIcon />,
 		},
 
-		github: {
+		Github: {
 			link: 'https://github.com/tirwanda',
 			username: 'Edho Dwi Tirwanda',
 			icon: <GitHubIcon />,
 		},
 
-		instagram: {
+		Instagram: {
 			link: 'https://www.instagram.com/edho_dt/',
 			username: '@edho_dt',
 			icon: <InstagramIcon />,
 		},
 
-		linkedin: {
+		Linkedin: {
 			link: 'https://www.linkedin.com/in/edho-dwi-tirwanda-63696916b/',
 			username: 'Edho Dwi Tirwanda',
 			icon: <LinkedInIcon />,
