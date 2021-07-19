@@ -1,27 +1,13 @@
 import React from 'react';
-import { Link, NavLink, withRouter } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 import resumeData from 'util/resumeData';
 import ResumeButton from 'elements/resume-button/ResumeButton';
 import './resumeHeader.scss';
 
 import TelegramIcon from '@material-ui/icons/Telegram';
 
-import {
-	Button,
-	Form,
-	FormControl,
-	Nav,
-	Navbar,
-	NavDropdown,
-} from 'react-bootstrap';
-import {
-	HomeRounded,
-	SchoolRounded,
-	Facebook,
-	LinkedIn,
-	GitHub,
-	Instagram,
-} from '@material-ui/icons';
+import { Nav, Navbar } from 'react-bootstrap';
+import { HomeRounded } from '@material-ui/icons';
 
 function ResumeHeader(props) {
 	const pathName = props?.location?.pathname;
