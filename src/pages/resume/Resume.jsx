@@ -1,15 +1,15 @@
+import React from 'react';
 import { Container, Grid } from '@material-ui/core';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
-import ResumeFooter from 'parts/resume-footer/ResumeFooter';
-import ResumeHeader from 'parts/resume-header/ResumeHeader';
-import ResumePortfolio from 'section/resume-portfolio/ResumePortfolio';
-import ResumeProfile from 'parts/resume-profile/ResumeProfile';
-import React from 'react';
 import './resume.scss';
-import Cv from 'section/resume-cv/ResumeCv';
 
-function Resume() {
+import ResumeHeader from 'parts/resume-header/ResumeHeader';
+import ResumeProfile from 'parts/resume-profile/ResumeProfile';
+import ResumePortfolio from 'section/resume-portfolio/ResumePortfolio';
+import Cv from 'section/resume-cv/ResumeCv';
+import ResumeFooter from 'parts/resume-footer/ResumeFooter';
+
+const Resume = () => {
 	return (
 		<div className="resume top-60">
 			<Container>
@@ -23,10 +23,10 @@ function Resume() {
 							<Switch>
 								<Route
 									exact
-									path="/resume/portfolio/"
+									path="/resume/portfolio"
 									component={ResumePortfolio}
 								/>
-								<Route exact path="/resume/" component={Cv} />
+								<Route path="/resume" component={Cv} />
 							</Switch>
 						</Router>
 						<ResumeFooter />
@@ -35,6 +35,6 @@ function Resume() {
 			</Container>
 		</div>
 	);
-}
+};
 
 export default Resume;
