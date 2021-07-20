@@ -1,0 +1,22 @@
+.section {
+	display: flex;
+	margin-bottom: 30px;
+
+	&-title {
+	}
+
+	&-text {
+		font-size: 15px;
+		color: #777;
+		white-space: pre-line;
+		line-height: 22px !important;
+	}
+
+	&-left {
+		flex: 1;
+	}
+
+	&-right {
+		flex: 1;
+	}
+}

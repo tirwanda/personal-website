@@ -19,8 +19,9 @@ const Resume = () => {
 					</Grid>
 					<Grid item xs>
 						<ResumeHeader />
-						<Router>
+						<div className="main-content container-shadow">
 							<Switch>
+								<Route exact path="/resume" component={Cv} />
 								<Route
 									exact
 									path="/resume/portfolio"
@@ -28,7 +29,7 @@ const Resume = () => {
 								/>
 								<Route path="/resume" component={Cv} />
 							</Switch>
-						</Router>
+						</div>
 						<ResumeFooter />
 					</Grid>
 				</Grid>
