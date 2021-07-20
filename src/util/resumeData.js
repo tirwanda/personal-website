@@ -36,6 +36,8 @@ const data = {
 			icon: <LinkedInIcon />,
 		},
 	},
+
+	about: 'High-quality professional with 1+ years of IT experiences in development, implementation and testing of Client-Server, Web Applications using JAVA/J2EE technologies, Spring Framework. Interested in a challenging career in web application development environment. Skilled in JAVA/J2EE, Mongodb, MySQL, PostgreSql Reactjs, React Native, Nodejs/Expressjs.',
 };
 
 export default data;
