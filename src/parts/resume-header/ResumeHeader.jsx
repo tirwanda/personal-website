@@ -23,8 +23,8 @@ function ResumeHeader(props) {
 			<Navbar.Collapse>
 				<Nav className="header-left">
 					<Nav.Link
-						as={NavLink}
 						to="/resume"
+						as={NavLink}
 						className={
 							pathName === '/resume'
 								? 'header-link-active'
@@ -35,8 +35,8 @@ function ResumeHeader(props) {
 					</Nav.Link>
 
 					<Nav.Link
-						as={NavLink}
 						to="/resume/portfolio"
+						as={NavLink}
 						className={
 							pathName === '/resume/portfolio'
 								? 'header-link-active'

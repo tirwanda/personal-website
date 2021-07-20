@@ -19,16 +19,14 @@ function Resume() {
 					</Grid>
 					<Grid item xs>
 						<ResumeHeader />
-						<Router>
-							<Switch>
-								<Route
-									exact
-									path="/resume/portfolio/"
-									component={ResumePortfolio}
-								/>
-								<Route exact path="/resume/" component={Cv} />
-							</Switch>
-						</Router>
+						<Switch>
+							<Route exact path="/resume" component={Cv} />
+							<Route
+								exact
+								path="/resume/portfolio"
+								component={ResumePortfolio}
+							/>
+						</Switch>
 						<ResumeFooter />
 					</Grid>
 				</Grid>
