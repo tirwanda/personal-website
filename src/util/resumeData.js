@@ -38,6 +38,23 @@ const data = {
 	},
 
 	about: 'High-quality professional with 1+ years of IT experiences in development, implementation and testing of Client-Server, Web Applications using JAVA/J2EE technologies, Spring Framework. Interested in a challenging career in web application development environment. Skilled in JAVA/J2EE, Mongodb, MySQL, PostgreSql Reactjs, React Native, Nodejs/Expressjs.',
+
+	experiences: [
+		{
+			title: 'Process Engineer - PT AHM',
+			date: '2019 - Present',
+			description:
+				'Assembling Operational and Project (Productivity and Quality Improvement)',
+		},
+	],
+
+	educations: [
+		{
+			title: 'Jakarta State Polytechnic ',
+			date: 'Agust 2015 - September 2018',
+			description: 'Electrical Engineering - IPK : 3.41',
+		},
+	],
 };
 
 export default data;
