@@ -50,7 +50,12 @@ const data = {
 
 	educations: [
 		{
-			title: 'Jakarta State Polytechnic ',
+			title: 'Binus University',
+			date: 'February 2021 - Present',
+			description: 'Computer Science - IPK : 3.48',
+		},
+		{
+			title: 'Jakarta State Polytechnic',
 			date: 'Agust 2015 - September 2018',
 			description: 'Electrical Engineering - IPK : 3.41',
 		},

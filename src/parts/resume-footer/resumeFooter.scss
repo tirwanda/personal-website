@@ -9,6 +9,12 @@
 	border-radius: 6px;
 	padding: 20px 25px;
 
+	&-left {
+		.name {
+			color: #ffc500;
+			font-size: small;
+		}
+	}
 	&-right {
 		.copyright {
 			font-size: small;

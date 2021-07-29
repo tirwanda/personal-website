@@ -16,4 +16,19 @@
 	&-right {
 		flex: 1;
 	}
+
+	.timeline-title {
+		font-size: 16px !important;
+		font-weight: 600 !important;
+	}
+
+	.timeline-date {
+		color: darkslategray;
+	}
+
+	.timeline-desc {
+		color: gray;
+		font-size: small;
+		margin-top: 6px;
+	}
 }

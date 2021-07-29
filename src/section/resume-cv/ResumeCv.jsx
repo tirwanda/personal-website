@@ -5,7 +5,9 @@ import './resumeCv.scss';
 import CustomeTimeline, {
 	CustomTimelineSeparator,
 } from 'parts/resume-timeline/ResumeTimeline';
-import data from 'util/resumeData';
+import TimelineItem from '@material-ui/lab/TimelineItem';
+import TimelineContent from '@material-ui/lab/TimelineContent';
+import resumeData from 'util/resumeData';
 
 import { Work, School } from '@material-ui/icons';
 
@@ -21,7 +23,7 @@ function Cv() {
 
 				<Grid item xs={12}>
 					<Typography className="section-text">
-						{data.about}
+						{resumeData.about}
 					</Typography>
 				</Grid>
 			</Grid>
@@ -39,13 +41,60 @@ function Cv() {
 							<CustomeTimeline
 								title="Working Hitory"
 								icon={<Work />}
-							></CustomeTimeline>
+							>
+								{resumeData.experiences.map((experience) => (
+									<TimelineItem key={experience.title}>
+										<CustomTimelineSeparator />
+										<TimelineContent>
+											<Typography className="timeline-title">
+												{experience.title}
+											</Typography>
+											<Typography
+												variant="caption"
+												className="timeline-date"
+											>
+												{experience.date}
+											</Typography>
+											<Typography
+												variant="body2"
+												className="timeline-desc"
+											>
+												{experience.description}
+											</Typography>
+										</TimelineContent>
+									</TimelineItem>
+								))}
+							</CustomeTimeline>
 						</Grid>
+
 						<Grid item sm={12} md={6}>
 							<CustomeTimeline
-								title="Working Hitory"
+								title="Education Hitory"
 								icon={<School />}
-							></CustomeTimeline>
+							>
+								{resumeData.educations.map((edu) => (
+									<TimelineItem key={edu.title}>
+										<CustomTimelineSeparator />
+										<TimelineContent>
+											<Typography className="timeline-title">
+												{edu.title}
+											</Typography>
+											<Typography
+												variant="caption"
+												className="timeline-date"
+											>
+												{edu.date}
+											</Typography>
+											<Typography
+												variant="body2"
+												className="timeline-desc"
+											>
+												{edu.description}
+											</Typography>
+										</TimelineContent>
+									</TimelineItem>
+								))}
+							</CustomeTimeline>
 						</Grid>
 					</Grid>
 				</Grid>
