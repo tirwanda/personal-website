@@ -31,4 +31,31 @@
 		font-size: small;
 		margin-top: 6px;
 	}
+
+	.service {
+		height: 100%;
+		text-align: center;
+
+		&-title {
+			font-size: 16px !important;
+			font-weight: 500 !important;
+			line-height: 35px !important;
+			text-align: center;
+		}
+
+		&-icon > .MuiSvgIcon-root {
+			font-size: 46px !important;
+			margin-left: 0 !important;
+			font-weight: 300 !important;
+			color: darkslategray !important;
+			margin-bottom: 16px;
+		}
+
+		&-description {
+			color: #989898;
+			border-color: #ffc500;
+			margin-right: 5px;
+			text-align: center;
+		}
+	}
 }

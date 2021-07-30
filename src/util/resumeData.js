@@ -3,6 +3,11 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
+import CodeOutlinedIcon from '@material-ui/icons/CodeOutlined';
+import BrandingWatermarkOutlinedIcon from '@material-ui/icons/BrandingWatermarkOutlined';
+import DeveloperModeOutlinedIcon from '@material-ui/icons/DeveloperModeOutlined';
+import AssignmentTurnedInIcon from '@material-ui/icons/AssignmentTurnedIn';
+
 const data = {
 	name: 'Edho Dwi Tirwanda',
 	title: 'Software Developer',
@@ -58,6 +63,49 @@ const data = {
 			title: 'Jakarta State Polytechnic',
 			date: 'Agust 2015 - September 2018',
 			description: 'Electrical Engineering - IPK : 3.41',
+		},
+	],
+
+	services: [
+		{
+			title: 'Web Developer',
+			description: 'I have been a web developer for 1+ year',
+			icon: <CodeOutlinedIcon />,
+		},
+		{
+			title: 'Branding Identity',
+			description: 'I have been a web developer for 1+ year',
+			icon: <BrandingWatermarkOutlinedIcon />,
+		},
+		{
+			title: 'Mobile Developer',
+			description: 'I have been a web developer for 1+ year',
+			icon: <DeveloperModeOutlinedIcon />,
+		},
+		{
+			title: 'Fast Delivery',
+			description: 'I have been a web developer for 1+ year',
+			icon: <AssignmentTurnedInIcon />,
+		},
+	],
+
+	skills: [
+		{
+			title: 'Front-End',
+			description: ['React Js', 'JavaScript', 'Bootstrap', 'Material UI'],
+		},
+
+		{
+			title: 'Back-End',
+			description: ['Java (Spring boot)', 'NodeJs/Express', 'C'],
+		},
+		{
+			title: 'Databases',
+			description: ['MySQL', 'PostgreSQL', 'MongooDb', 'Firebase'],
+		},
+		{
+			title: 'Source Control',
+			description: ['Git', 'Github'],
 		},
 	],
 };

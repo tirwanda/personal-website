@@ -1,4 +1,4 @@
-import { Grid, Typography } from '@material-ui/core';
+import { Grid, Icon, Typography } from '@material-ui/core';
 import React from 'react';
 import './resumeCv.scss';
 
@@ -101,7 +101,37 @@ function Cv() {
 			</Grid>
 
 			{/* Service */}
-			<Grid container className="section"></Grid>
+			<Grid container className="section">
+				<Grid item className="section-title">
+					<span></span>
+					<h6 variant="h6">My Services</h6>
+				</Grid>
+				<Grid item xs={12}>
+					<Grid container spacing={3} justify="space-around">
+						{resumeData.services.map((service) => (
+							<Grid item xs={12} sm={6} md={3}>
+								<div className="service">
+									<Icon className="service-icon">
+										{service.icon}
+									</Icon>
+									<Typography
+										variant="h6"
+										className="service-title"
+									>
+										{service.title}
+									</Typography>
+									<Typography
+										variant="body2"
+										className="service-description"
+									>
+										{service.description}
+									</Typography>
+								</div>
+							</Grid>
+						))}
+					</Grid>
+				</Grid>
+			</Grid>
 
 			{/* Skills */}
 			<Grid container className=""></Grid>
