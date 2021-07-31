@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Grid } from '@material-ui/core';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import './resume.scss';
 
 import ResumeHeader from 'parts/resume-header/ResumeHeader';

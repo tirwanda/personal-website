@@ -8,6 +8,7 @@ import CustomeTimeline, {
 import TimelineItem from '@material-ui/lab/TimelineItem';
 import TimelineContent from '@material-ui/lab/TimelineContent';
 import resumeData from 'util/resumeData';
+import { SkillsData } from 'data/skills';
 
 import { Work, School } from '@material-ui/icons';
 
@@ -107,9 +108,15 @@ function Cv() {
 					<h6 variant="h6">My Services</h6>
 				</Grid>
 				<Grid item xs={12}>
-					<Grid container spacing={3} justify="space-around">
+					<Grid container spacing={3}>
 						{resumeData.services.map((service) => (
-							<Grid item xs={12} sm={6} md={3}>
+							<Grid
+								key={service.title}
+								item
+								xs={12}
+								sm={6}
+								md={3}
+							>
 								<div className="service">
 									<Icon className="service-icon">
 										{service.icon}
@@ -134,7 +141,26 @@ function Cv() {
 			</Grid>
 
 			{/* Skills */}
-			<Grid container className=""></Grid>
+			<Grid container className="section">
+				<Grid item className="section-title">
+					<span></span>
+					<h6 variant="h6">My Skills</h6>
+				</Grid>
+
+				<Grid container className="skill-content">
+					{SkillsData.map((item, index) => {
+						return (
+							<div key={index} className="skill-icon-div">
+								<img
+									src={item.icon}
+									className="skill-icon"
+									alt={item.platform}
+								/>
+							</div>
+						);
+					})}
+				</Grid>
+			</Grid>
 
 			{/* Contact */}
 			<Grid container className=""></Grid>

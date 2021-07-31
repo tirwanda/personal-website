@@ -35,6 +35,11 @@
 	.service {
 		height: 100%;
 		text-align: center;
+		box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.13);
+		-webkit-box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.13);
+		-moz-box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.13);
+		border-radius: 6px;
+		padding: 16px 8px;
 
 		&-title {
 			font-size: 16px !important;
@@ -56,6 +61,29 @@
 			border-color: #ffc500;
 			margin-right: 5px;
 			text-align: center;
+		}
+	}
+
+	.skill-content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.skill-icon-div {
+			padding: 6px;
+			cursor: pointer;
+			margin: 6px 0;
+			margin-right: 3rem;
+
+			.skill-icon {
+				height: 70px;
+				opacity: 0.8;
+				transition: 0.3s all ease-in-out;
+
+				&:hover {
+					opacity: 1;
+				}
+			}
 		}
 	}
 }
