@@ -7,6 +7,7 @@ import ResumeHeader from 'parts/resume-header/ResumeHeader';
 import ResumeProfile from 'parts/resume-profile/ResumeProfile';
 import ResumePortfolio from 'section/resume-portfolio/ResumePortfolio';
 import Cv from 'section/resume-cv/ResumeCv';
+import ResumeContact from 'section/resume-contact/ResumeContact';
 import ResumeFooter from 'parts/resume-footer/ResumeFooter';
 
 const Resume = () => {
@@ -27,7 +28,10 @@ const Resume = () => {
 									path="/resume/portfolio"
 									component={ResumePortfolio}
 								/>
-								<Route path="/resume" component={Cv} />
+								<Route
+									path="/resume/contact"
+									component={ResumeContact}
+								/>
 							</Switch>
 						</div>
 						<ResumeFooter />

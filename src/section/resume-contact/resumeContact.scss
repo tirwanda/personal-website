@@ -1,0 +1,22 @@
+.section {
+	.contact-form {
+		padding-right: 12px;
+	}
+
+	.contact-socials-container {
+		margin-top: 1rem;
+
+		.social-icon {
+			margin-right: 1rem;
+
+			& > a > .MuiSvgIcon-root {
+				color: black;
+				font-size: 20px;
+			}
+		}
+	}
+
+	.contact-info > span {
+		font-weight: 600;
+	}
+}

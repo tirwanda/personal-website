@@ -161,9 +161,6 @@ function Cv() {
 					})}
 				</Grid>
 			</Grid>
-
-			{/* Contact */}
-			<Grid container className=""></Grid>
 		</>
 	);
 }
