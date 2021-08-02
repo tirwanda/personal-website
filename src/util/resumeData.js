@@ -8,6 +8,8 @@ import BrandingWatermarkOutlinedIcon from '@material-ui/icons/BrandingWatermarkO
 import DeveloperModeOutlinedIcon from '@material-ui/icons/DeveloperModeOutlined';
 import AssignmentTurnedInIcon from '@material-ui/icons/AssignmentTurnedIn';
 
+import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
+
 const data = {
 	name: 'Edho Dwi Tirwanda',
 	title: 'Software Developer',
@@ -106,6 +108,43 @@ const data = {
 		{
 			title: 'Source Control',
 			description: ['Git', 'Github'],
+		},
+	],
+
+	portfolio: [
+		{
+			tag: 'Front-End',
+			image: require('assets/images/portfolio/mern.png').default,
+			title: 'Staycation',
+			description:
+				'This project was built using ReactJs, NodeJs/ExpressJs, Mocha Chai, Bootstrap 4, Sass and Multer',
+			links: [
+				{
+					link: 'https://staycation-tirwanda.herokuapp.com/',
+					icon: <PlayCircleOutlineIcon />,
+				},
+				{
+					link: 'https://github.com/tirwanda/staycation-mern',
+					icon: <GitHubIcon />,
+				},
+			],
+		},
+		{
+			tag: 'Back-End',
+			image: require('assets/images/portfolio/nodeJs.png').default,
+			title: 'Staycation-Admin',
+			description:
+				'This project was built using ReactJs, NodeJs/ExpressJs, Mocha Chai, Bootstrap 4, Sass and Multer.\n Username: admin || Password: rahasia',
+			links: [
+				{
+					link: 'https://tirwanda-staycation.herokuapp.com/',
+					icon: <PlayCircleOutlineIcon />,
+				},
+				{
+					link: 'https://github.com/tirwanda/server-staycation',
+					icon: <GitHubIcon />,
+				},
+			],
 		},
 	],
 };
