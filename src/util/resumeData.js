@@ -114,7 +114,7 @@ const data = {
 	portfolio: [
 		{
 			tag: 'Front-End',
-			image: require('assets/images/portfolio/mern.png').default,
+			image: [require('assets/images/portfolio/mern.png').default],
 			title: 'Staycation',
 			caption: 'Tech: ReactJs, Bootstrap 4',
 			description:
@@ -132,7 +132,7 @@ const data = {
 		},
 		{
 			tag: 'Back-End',
-			image: require('assets/images/portfolio/nodeJs.png').default,
+			image: [require('assets/images/portfolio/nodeJs.png').default],
 			title: 'Staycation-Admin',
 			caption: 'Tech: NodeJs/ExpressJs',
 			description:

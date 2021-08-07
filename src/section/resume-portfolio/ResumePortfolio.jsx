@@ -18,6 +18,7 @@ import {
 import './resumePortfolio.scss';
 
 import ResumeData from 'util/resumeData';
+import ImageGallery from 'elements/ImageGallery/ImageGallery';
 
 function ResumePortfolio() {
 	const [tabValue, setTabValue] = useState('All');
@@ -119,16 +120,15 @@ function ResumePortfolio() {
 					open={projectDialog}
 					onClose={() => setProjectDialog(false)}
 					className="project-dialog"
+					maxWidth={'lg'}
 				>
 					<DialogTitle onClose={() => setProjectDialog(false)}>
 						{projectDialog.title}
 					</DialogTitle>
-					<img
-						src={projectDialog.image}
-						alt=""
-						className="project-dialog-image"
-					/>
-					<DialogContent>
+					<DialogContent style={{ heigh: '80vh' }}>
+						{projectDialog.image && (
+							<ImageGallery images={projectDialog.image} />
+						)}
 						<Typography className="project-dialog-description">
 							{projectDialog.description}
 						</Typography>
