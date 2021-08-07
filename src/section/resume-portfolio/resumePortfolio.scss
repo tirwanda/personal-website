@@ -1,0 +1,71 @@
+.section {
+	.custom-tabs {
+		.active {
+			color: #ffc500 !important;
+		}
+
+		&-item {
+			padding: 0 !important;
+			// min-width: 0px !important;
+			margin-right: 20px !important;
+			font-size: 14px !important;
+			font-weight: 400 !important;
+			outline-width: 0px !important;
+		}
+	}
+
+	.custom-card {
+		height: 100%;
+		min-width: 250px;
+		box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.08) !important;
+		border-radius: 5px;
+		overflow: hidden;
+		outline-width: 0px;
+
+		&-image {
+			height: 140px;
+		}
+
+		&-title {
+			font-weight: 600;
+		}
+
+		&-caption {
+			color: gray;
+			font-weight: 300;
+		}
+	}
+}
+
+.project-dialog {
+	&-image {
+		max-height: 300px;
+		width: 100%;
+		object-fit: cover;
+		object-position: center center;
+	}
+
+	&-description {
+		margin-top: 10px !important;
+	}
+
+	&-actions {
+		justify-content: center !important;
+		margin-bottom: 10px;
+
+		.action-icon {
+			color: darkslategray;
+			cursor: pointer;
+			margin: 0px 12px;
+			transition: 0.3s all ease-in-out;
+
+			.MuiSvgIcon-root {
+				font-size: 30px !important;
+			}
+
+			&:hover {
+				color: #ffc500;
+			}
+		}
+	}
+}

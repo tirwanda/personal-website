@@ -116,6 +116,7 @@ const data = {
 			tag: 'Front-End',
 			image: require('assets/images/portfolio/mern.png').default,
 			title: 'Staycation',
+			caption: 'Tech: ReactJs, Bootstrap 4',
 			description:
 				'This project was built using ReactJs, NodeJs/ExpressJs, Mocha Chai, Bootstrap 4, Sass and Multer',
 			links: [
@@ -133,6 +134,7 @@ const data = {
 			tag: 'Back-End',
 			image: require('assets/images/portfolio/nodeJs.png').default,
 			title: 'Staycation-Admin',
+			caption: 'Tech: NodeJs/ExpressJs',
 			description:
 				'This project was built using ReactJs, NodeJs/ExpressJs, Mocha Chai, Bootstrap 4, Sass and Multer.\n Username: admin || Password: rahasia',
 			links: [
