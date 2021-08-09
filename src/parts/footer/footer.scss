@@ -1,0 +1,33 @@
+.home-footer {
+	background-color: lightgrey;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem 1rem 0 1rem;
+	margin-top: 3rem;
+
+	.section-footer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		max-width: 600px;
+
+		.social-icons {
+			margin: 1rem 0;
+
+			a {
+				color: black;
+				width: 40px;
+				height: 40px;
+				padding: 8px;
+				justify-content: center;
+				align-items: center;
+				background-color: #e6e3e3;
+				margin: 20px 10px;
+				border-radius: 50%;
+			}
+		}
+	}
+}
