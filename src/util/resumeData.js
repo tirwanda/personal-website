@@ -114,6 +114,16 @@ const data = {
 	portfolio: [
 		{
 			tag: 'Front-End',
+			tech: [
+				'ReactJs',
+				'NodeJs',
+				'Firebase',
+				'Healthcare',
+				'ReactJs',
+				'NodeJs',
+				'Firebase',
+				'Healthcare',
+			],
 			image: [require('assets/images/portfolio/mern.png').default],
 			title: 'Staycation',
 			caption: 'Tech: ReactJs, Bootstrap 4',
@@ -134,6 +144,16 @@ const data = {
 			tag: 'Back-End',
 			image: [require('assets/images/portfolio/nodeJs.png').default],
 			title: 'Staycation-Admin',
+			tech: [
+				'ReactJs',
+				'NodeJs',
+				'Firebase',
+				'Healthcare',
+				'ReactJs',
+				'NodeJs',
+				'Firebase',
+				'Healthcare',
+			],
 			caption: 'Tech: NodeJs/ExpressJs',
 			description:
 				'This project was built using ReactJs, NodeJs/ExpressJs, Mocha Chai, Bootstrap 4, Sass and Multer.\n Username: admin || Password: rahasia',

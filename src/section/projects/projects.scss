@@ -1,0 +1,12 @@
+.home-project {
+	margin-top: 3rem;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+
+	.section-title {
+		font-size: 2rem;
+		// margin-bottom: 1rem;
+		font-weight: 600;
+	}
+}
