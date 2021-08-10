@@ -6,7 +6,7 @@ import resumeData from 'util/resumeData';
 function Footer() {
 	return (
 		<div className="home-footer">
-			<div className="section-footer">
+			<div className="container section-footer">
 				<p>
 					I makeas soon as possibale.You really like my work,if you
 					don&#8217;t i change this until you like I give you
