@@ -4,22 +4,22 @@ import './projects.scss';
 import resumeData from 'util/resumeData';
 import Separator from 'elements/separator/Separator';
 import ProjectCard from 'parts/project-card/ProjectCard';
+import { Grid } from '@material-ui/core';
 
 function Projects() {
 	return (
-		<div className="home-project">
-			<div className="container container-px container-py">
+		<Grid container className="home-project container">
+			<Grid item xs={12} className="home-about-title">
 				<Separator />
 				<label className="section-title">Projects</label>
-				<div>
-					{resumeData.portfolio.map((project) => {
-						return (
-							<ProjectCard key={project.tag} project={project} />
-						);
-					})}
-				</div>
-			</div>
-		</div>
+			</Grid>
+
+			<Grid item xs={12}>
+				{resumeData.portfolio.map((project) => {
+					return <ProjectCard key={project.tag} project={project} />;
+				})}
+			</Grid>
+		</Grid>
 	);
 }
 

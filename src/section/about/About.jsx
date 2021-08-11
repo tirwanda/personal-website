@@ -3,47 +3,51 @@ import Typed from 'react-typed';
 import './about.scss';
 
 import elforza18 from 'assets/images/elforza18.jpg';
+import { Grid } from '@material-ui/core';
+import Separator from 'elements/separator/Separator';
+
+import resumeData from 'util/resumeData';
 
 function About() {
 	return (
-		<div className="about" id="about">
-			<div className="container container-px container-py">
-				<h2 className="title">About Me.</h2>
-				<div className="about-content">
-					<div className="column left">
-						<img src={elforza18} alt="" />
-					</div>
-					<div className="column right">
-						<div className="text">
-							I'am Edho Dwi Tirwanda and I'm a{' '}
-							<Typed
-								className="typed-text"
-								strings={[
-									'Web Developer',
-									'Android Developer',
-									'IoT Developer',
-									'Automation Engineer',
-								]}
-								typeSpeed={40}
-								backSpeed={60}
-								loop
-							></Typed>
+		<Grid container className="home-about container">
+			<Grid item xs={12} className="home-about-title">
+				<Separator />
+				<label className="section-title">About Me</label>
+			</Grid>
+
+			<Grid item xs={12}>
+				<Grid container spacing={3}>
+					<Grid item sm={12} md={6}>
+						<div className="about-image">
+							<img src={elforza18} alt="El-Forza-18" />
 						</div>
-						<p>
-							High-quality professional with 1+ years of IT
-							experiences in development, implementation and
-							testing of Client-Server, Web Applications using
-							JAVA/J2EE technologies, Spring Framework. Interested
-							in a challenging career in web application
-							development environment. Skilled in JAVA/J2EE,
-							Mongodb, MySQL, PostgreSql Reactjs, React Native,
-							Nodejs/Expressjs.
-						</p>
-						<a href="/">Download CV</a>
-					</div>
-				</div>
-			</div>
-		</div>
+					</Grid>
+
+					<Grid item sm={12} md={6}>
+						<div className="about-right">
+							<div className="about-text">
+								I'am Edho Dwi Tirwanda and I'm a{' '}
+								<Typed
+									className="typed-text"
+									strings={[
+										'Web Developer',
+										'Android Developer',
+										'IoT Developer',
+										'Automation Engineer',
+									]}
+									typeSpeed={40}
+									backSpeed={60}
+									loop
+								></Typed>
+							</div>
+							<p>{resumeData.about}</p>
+							<a href="/">Download CV</a>
+						</div>
+					</Grid>
+				</Grid>
+			</Grid>
+		</Grid>
 	);
 }
 export default About;
