@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Container, Grid } from '@material-ui/core';
 import { Route, Switch } from 'react-router-dom';
 import './resume.scss';
@@ -11,8 +11,12 @@ import ResumeContact from 'section/resume-contact/ResumeContact';
 import ResumeFooter from 'parts/resume-footer/ResumeFooter';
 
 const Resume = () => {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	});
+
 	return (
-		<div className="resume top-60">
+		<div className="resume top-60" id="resume">
 			<Container>
 				<Grid container spacing={7}>
 					<Grid item xs={12} sm={12} md={3} lg={3}>

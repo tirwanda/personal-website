@@ -10,7 +10,7 @@ import resumeData from 'util/resumeData';
 
 function About() {
 	return (
-		<Grid container className="home-about container">
+		<Grid container className="home-about container" id="about">
 			<Grid item xs={12} className="home-about-title">
 				<Separator />
 				<label className="section-title">About Me</label>

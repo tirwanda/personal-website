@@ -8,7 +8,7 @@ import { Grid } from '@material-ui/core';
 
 function Projects() {
 	return (
-		<Grid container className="home-project container">
+		<Grid container className="home-project container" id="projects">
 			<Grid item xs={12} className="home-about-title">
 				<Separator />
 				<label className="section-title">Projects</label>

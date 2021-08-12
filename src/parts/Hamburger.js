@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import Button from 'elements/Button';
 
+import { Link, animateScroll as scroll } from 'react-scroll';
+
 import elforza16 from 'assets/images/elforza16.jpg';
 import elforza17 from 'assets/images/elforza17.jpg';
 import elforza18 from 'assets/images/elforza18.jpg';
@@ -85,23 +87,34 @@ export default function Hamburger({ state }) {
 							<nav>
 								<ul>
 									<li>
-										<Button
-											hoverEnter={(e) => handleHover(e)}
-											hoverOut={(e) => handleHoverExit(e)}
-											reff={(el) => (line1 = el)}
-											className=""
-											href="/about"
-											type="link"
+										<Link
+											spy={true}
+											to="about"
+											smooth={true}
+											offset={-50}
 										>
-											About Me
-										</Button>
+											<Button
+												hoverEnter={(e) =>
+													handleHover(e)
+												}
+												hoverOut={(e) =>
+													handleHoverExit(e)
+												}
+												reff={(el) => (line1 = el)}
+												className=""
+												href="/"
+												type="link"
+											>
+												About me
+											</Button>
+										</Link>
 									</li>
 									<li>
 										<Button
 											hoverEnter={(e) => handleHover(e)}
 											hoverOut={(e) => handleHoverExit(e)}
 											reff={(el) => (line2 = el)}
-											className=""
+											onClick={scroll.toToTop}
 											href="/resume"
 											type="link"
 										>
@@ -109,28 +122,51 @@ export default function Hamburger({ state }) {
 										</Button>
 									</li>
 									<li>
-										<Button
-											hoverEnter={(e) => handleHover(e)}
-											hoverOut={(e) => handleHoverExit(e)}
-											reff={(el) => (line3 = el)}
-											className=""
-											href="/portfolio"
-											type="link"
+										<Link
+											spy={true}
+											to="projects"
+											smooth={true}
+											offset={-50}
 										>
-											Portfolio
-										</Button>
+											<Button
+												hoverEnter={(e) =>
+													handleHover(e)
+												}
+												hoverOut={(e) =>
+													handleHoverExit(e)
+												}
+												reff={(el) => (line3 = el)}
+												className=""
+												href="/"
+												type="link"
+											>
+												Projects
+											</Button>
+										</Link>
 									</li>
 									<li>
-										<Button
-											hoverEnter={(e) => handleHover(e)}
-											hoverOut={(e) => handleHoverExit(e)}
-											reff={(el) => (line4 = el)}
-											className=""
-											href="/skills"
-											type="link"
+										<Link
+											spy={true}
+											to="skills"
+											smooth={true}
+											offset={-50}
 										>
-											Skills
-										</Button>
+											<Button
+												hoverEnter={(e) =>
+													handleHover(e)
+												}
+												hoverOut={(e) =>
+													handleHoverExit(e)
+												}
+												reff={(el) => (line4 = el)}
+												className=""
+												href="/"
+												to="skills"
+												type="link"
+											>
+												Skills
+											</Button>
+										</Link>
 									</li>
 								</ul>
 							</nav>
