@@ -26,7 +26,6 @@ function ResumePortfolio() {
 
 	return (
 		<>
-			{/* About me */}
 			<Grid container className="section">
 				<Grid item className="section-title">
 					<span></span>
