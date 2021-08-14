@@ -28,7 +28,11 @@ function Projects() {
 
 	return (
 		<>
-			<Grid container className="home-project container section">
+			<Grid
+				id="projects"
+				container
+				className="home-project container section"
+			>
 				<Grid item xs={12} className="home-about-title">
 					<Separator />
 					<label className="section-title">Projects</label>
@@ -36,7 +40,7 @@ function Projects() {
 				<Grid item xs={12}>
 					<Tabs
 						value={tabValue}
-						indicatorColor="white"
+						indicatorColor="primary"
 						className="custom-tabs"
 						onChange={(event, newValue) => setTabValue(newValue)}
 					>
