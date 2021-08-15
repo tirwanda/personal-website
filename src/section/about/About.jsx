@@ -4,17 +4,14 @@ import './about.scss';
 
 import elforza18 from 'assets/images/elforza18.jpg';
 import { Grid } from '@material-ui/core';
-import Separator from 'elements/separator/Separator';
 
 import resumeData from 'util/resumeData';
+import HomeTitle from 'elements/home-title/HomeTitle';
 
 function About() {
 	return (
 		<Grid container className="home-about container" id="about">
-			<Grid item xs={12} className="home-about-title">
-				<Separator />
-				<label className="section-title">About Me</label>
-			</Grid>
+			<HomeTitle title="About Me" />
 
 			<Grid item xs={12}>
 				<Grid container spacing={3}>

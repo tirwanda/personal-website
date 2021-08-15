@@ -2,7 +2,6 @@ import React from 'react';
 import { useState } from 'react';
 import './projects.scss';
 
-import Separator from 'elements/separator/Separator';
 import {
 	Grid,
 	Tab,
@@ -21,6 +20,7 @@ import {
 
 import ResumeData from 'util/resumeData';
 import ImageGallery from 'elements/ImageGallery/ImageGallery';
+import HomeTitle from 'elements/home-title/HomeTitle';
 
 function Projects() {
 	const [tabValue, setTabValue] = useState('All');
@@ -33,10 +33,7 @@ function Projects() {
 				container
 				className="home-project container section"
 			>
-				<Grid item xs={12} className="home-about-title">
-					<Separator />
-					<label className="section-title">Projects</label>
-				</Grid>
+				<HomeTitle title="My Projects" />
 				<Grid item xs={12}>
 					<Tabs
 						value={tabValue}

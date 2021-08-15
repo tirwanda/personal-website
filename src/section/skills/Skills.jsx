@@ -2,16 +2,13 @@ import React from 'react';
 import './skills.scss';
 
 import { Grid } from '@material-ui/core';
-import Separator from 'elements/separator/Separator';
 import { SkillsData } from 'data/skills';
+import HomeTitle from 'elements/home-title/HomeTitle';
 
 function Skills() {
 	return (
 		<Grid id="skills" container className="home-skills container section">
-			<Grid item xs={12} className="home-about-title">
-				<Separator />
-				<label className="section-title">My Skills</label>
-			</Grid>
+			<HomeTitle title="My Skills" />
 
 			<Grid container className="home-skills-content">
 				{SkillsData.map((item, index) => {
