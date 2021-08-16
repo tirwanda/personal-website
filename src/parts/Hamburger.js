@@ -20,6 +20,7 @@ import {
 	handleHover,
 	handleHoverExit,
 } from 'parts/Animation';
+import { Grid } from '@material-ui/core';
 
 const achievement = [
 	{ name: 'KRI 2016', image: elforza16 },
@@ -81,105 +82,144 @@ export default function Hamburger({ state }) {
 					ref={(el) => (pictureBackground = el)}
 					className="menu-picture-background"
 				></div>
-				<div className="container">
+				<Grid container className="container">
 					<div className="wrapper">
 						<div className="menu-links">
-							<nav>
-								<ul>
-									<li>
-										<Link
-											spy={true}
-											to="about"
-											smooth={true}
-											offset={-50}
+							<Grid item sm={12}>
+								<Grid
+									container
+									spacing={5}
+									className="menu-mid"
+								>
+									<Grid item sm={12} md={8}>
+										<nav>
+											<ul>
+												<li>
+													<Link
+														spy={true}
+														to="about"
+														smooth={true}
+														offset={-50}
+													>
+														<Button
+															hoverEnter={(e) =>
+																handleHover(e)
+															}
+															hoverOut={(e) =>
+																handleHoverExit(
+																	e
+																)
+															}
+															reff={(el) =>
+																(line1 = el)
+															}
+															className=""
+															href="/"
+															type="link"
+														>
+															About me
+														</Button>
+													</Link>
+												</li>
+												<li>
+													<Button
+														hoverEnter={(e) =>
+															handleHover(e)
+														}
+														hoverOut={(e) =>
+															handleHoverExit(e)
+														}
+														reff={(el) =>
+															(line2 = el)
+														}
+														onClick={scroll.toToTop}
+														href="/resume"
+														type="link"
+													>
+														Resume
+													</Button>
+												</li>
+												<li>
+													<Link
+														spy={true}
+														to="projects"
+														smooth={true}
+														offset={-50}
+													>
+														<Button
+															hoverEnter={(e) =>
+																handleHover(e)
+															}
+															hoverOut={(e) =>
+																handleHoverExit(
+																	e
+																)
+															}
+															reff={(el) =>
+																(line3 = el)
+															}
+															className=""
+															href="/"
+															type="link"
+														>
+															Projects
+														</Button>
+													</Link>
+												</li>
+												<li>
+													<Link
+														spy={true}
+														to="skills"
+														smooth={true}
+														offset={-50}
+													>
+														<Button
+															hoverEnter={(e) =>
+																handleHover(e)
+															}
+															hoverOut={(e) =>
+																handleHoverExit(
+																	e
+																)
+															}
+															reff={(el) =>
+																(line4 = el)
+															}
+															className=""
+															href="/"
+															to="skills"
+															type="link"
+														>
+															Skills
+														</Button>
+													</Link>
+												</li>
+											</ul>
+										</nav>
+									</Grid>
+									<Grid item sm={12} md={4}>
+										<div
+											ref={(el) => (info = el)}
+											className="info"
 										>
-											<Button
-												hoverEnter={(e) =>
-													handleHover(e)
-												}
-												hoverOut={(e) =>
-													handleHoverExit(e)
-												}
-												reff={(el) => (line1 = el)}
-												className=""
-												href="/"
-												type="link"
-											>
-												About me
-											</Button>
-										</Link>
-									</li>
-									<li>
-										<Button
-											hoverEnter={(e) => handleHover(e)}
-											hoverOut={(e) => handleHoverExit(e)}
-											reff={(el) => (line2 = el)}
-											onClick={scroll.toToTop}
-											href="/resume"
-											type="link"
-										>
-											Resume
-										</Button>
-									</li>
-									<li>
-										<Link
-											spy={true}
-											to="projects"
-											smooth={true}
-											offset={-50}
-										>
-											<Button
-												hoverEnter={(e) =>
-													handleHover(e)
-												}
-												hoverOut={(e) =>
-													handleHoverExit(e)
-												}
-												reff={(el) => (line3 = el)}
-												className=""
-												href="/"
-												type="link"
-											>
-												Projects
-											</Button>
-										</Link>
-									</li>
-									<li>
-										<Link
-											spy={true}
-											to="skills"
-											smooth={true}
-											offset={-50}
-										>
-											<Button
-												hoverEnter={(e) =>
-													handleHover(e)
-												}
-												hoverOut={(e) =>
-													handleHoverExit(e)
-												}
-												reff={(el) => (line4 = el)}
-												className=""
-												href="/"
-												to="skills"
-												type="link"
-											>
-												Skills
-											</Button>
-										</Link>
-									</li>
-								</ul>
-							</nav>
-							<div ref={(el) => (info = el)} className="info">
-								<h3>Our Promise</h3>
-								<p>
-									Lorem ipsum dolor sit amet, consectetur
-									adipisicing elit. Fuga alias sit facere
-									animi similique possimus aliquid odit ut
-									consequatur at?
-								</p>
-							</div>
-							<div className="achievement">
+											<h3>Our Promise</h3>
+											<p>
+												Lorem ipsum dolor sit amet,
+												consectetur adipisicing elit.
+												Fuga alias sit facere animi
+												similique possimus aliquid odit
+												ut consequatur at?
+											</p>
+										</div>
+									</Grid>
+								</Grid>
+							</Grid>
+							<Grid
+								container
+								sm={12}
+								md={12}
+								className="achievement"
+							>
 								Achievement :
 								{achievement.map((el) => (
 									<span
@@ -199,10 +239,10 @@ export default function Hamburger({ state }) {
 										{el.name}
 									</span>
 								))}
-							</div>
+							</Grid>
 						</div>
 					</div>
-				</div>
+				</Grid>
 			</div>
 		</div>
 	);
