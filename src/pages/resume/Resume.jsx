@@ -9,6 +9,7 @@ import ResumePortfolio from 'section/resume-portfolio/ResumePortfolio';
 import Cv from 'section/resume-cv/ResumeCv';
 import ResumeContact from 'section/resume-contact/ResumeContact';
 import ResumeFooter from 'parts/resume-footer/ResumeFooter';
+import ResumeAchievment from 'section/resume-achievment/ResumeAchievment';
 
 const Resume = () => {
 	useEffect(() => {
@@ -35,6 +36,10 @@ const Resume = () => {
 								<Route
 									path="/resume/contact"
 									component={ResumeContact}
+								/>
+								<Route
+									path="/resume/achievment"
+									component={ResumeAchievment}
 								/>
 							</Switch>
 						</div>

@@ -48,14 +48,14 @@ function ResumeHeader(props) {
 
 					<Nav.Link
 						as={NavLink}
-						to="/resume/blog"
+						to="/resume/achievment"
 						className={
-							pathName === '/resume/blog'
+							pathName === '/resume/achievment'
 								? 'header-link-active'
 								: 'header-link'
 						}
 					>
-						Blog
+						Achievment
 					</Nav.Link>
 
 					<Nav.Link

@@ -169,6 +169,15 @@ const data = {
 			],
 		},
 	],
+
+	achievment: [
+		{
+			title: 'Cloud Practitioner Essentials (AWS Cloud)',
+			date: '15 Mei  2021',
+			organizer: 'Dicoding',
+			image: require('assets/images/portfolio/mern.png').default,
+		},
+	],
 };
 
 export default data;
