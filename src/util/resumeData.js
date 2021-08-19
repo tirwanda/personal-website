@@ -175,7 +175,41 @@ const data = {
 			title: 'Cloud Practitioner Essentials (AWS Cloud)',
 			date: '15 Mei  2021',
 			organizer: 'Dicoding',
-			image: require('assets/images/achievment/aws.PNG').default,
+			image: [require('assets/images/achievment/aws.png').default],
+		},
+		{
+			title: 'Peserta ABU Robocon 2018',
+			date: '13 Juli 2018',
+			organizer: 'RISTEKDIKTI',
+			image: [
+				require('assets/images/achievment/pesertaKRAI2018.png').default,
+			],
+		},
+		{
+			title: 'Juara Harapan ABU Robocon 2018',
+			date: '13 Juli 2018',
+			organizer: 'RISTEKDIKTI',
+			image: [
+				require('assets/images/achievment/harapanKRAI2018.png').default,
+			],
+		},
+		{
+			title: 'PIMNAS Ke-30',
+			date: '25 Agustus 2017',
+			organizer: 'RISTEKDIKTI',
+			image: [require('assets/images/achievment/pimnas.png').default],
+		},
+		{
+			title: 'Svelte JavaScript Developer',
+			date: '1 January 2021',
+			organizer: 'Build With Angga',
+			image: [require('assets/images/achievment/svelte.png').default],
+		},
+		{
+			title: 'MERN Stack Developer',
+			date: '27 February 2021',
+			organizer: 'Build With Angga',
+			image: [require('assets/images/achievment/mern.png').default],
 		},
 	],
 };

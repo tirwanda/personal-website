@@ -1,0 +1,21 @@
+.section-card {
+	.custom-card {
+		height: 100%;
+		min-width: 250px;
+		box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.08) !important;
+		border-radius: 5px;
+		overflow: hidden;
+		outline-width: 0px;
+
+		&-image {
+			height: 140px;
+		}
+		&-title {
+			font-weight: 600;
+		}
+		&-caption {
+			color: gray;
+			font-weight: 300;
+		}
+	}
+}
