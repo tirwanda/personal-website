@@ -2,6 +2,8 @@ import React from 'react';
 import Typed from 'react-typed';
 import './about.scss';
 
+import myCv from 'assets/files/edho-dwi-tirwanda.pdf';
+
 import elforza18 from 'assets/images/elforza18.jpg';
 import { Grid } from '@material-ui/core';
 
@@ -39,7 +41,14 @@ function About() {
 								></Typed>
 							</div>
 							<p>{resumeData.about}</p>
-							<a href="/">Download CV</a>
+							<a
+								href={myCv}
+								download="Edho-Dwi-Tirwanda_CV.pdf"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Download Cv
+							</a>
 						</div>
 					</Grid>
 				</Grid>
