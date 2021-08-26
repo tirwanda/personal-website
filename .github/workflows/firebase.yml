@@ -1,0 +1,43 @@
+name: REACT CI
+
+on:
+    push:
+        branches:
+            - 'master'
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                node-version: [15.x]
+
+        steps:
+            - uses: actions/checkout@v1
+            - run: npm install
+            - run: npm run build
+            - run: npm test
+            - name: Archive Build
+                uses: actions/upload-artifac@v1
+                with:
+                    name: build
+                    path: build
+    
+    deploy: 
+        name: Deploy
+        needs: build
+        runs-on: ubuntu-latest
+        steps: 
+            - uses: actions/upload-artifac@v1
+            - name: Download Build
+                uses: actions/checkout@v1
+                with: 
+                name: build
+                path: build
+            - name: Deploy to firebase
+                uses: w9jds/firebase-action@master
+                with: 
+                    args: deploy --only hosting
+                env:
+                    FIREBASE_TOKEN: ${{secrets.FIREBASE_TOKEN}}
+
