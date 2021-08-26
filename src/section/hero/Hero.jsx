@@ -50,7 +50,11 @@ export default function Hero() {
 					></Typed>
 				</div>
 
-				<Button className="btn-main-hire" href="#" type="link">
+				<Button
+					className="btn-main-hire"
+					href="/resume/contact"
+					type="link"
+				>
 					Hire me
 				</Button>
 				<SocialContact />

@@ -113,18 +113,12 @@ const data = {
 
 	portfolio: [
 		{
-			tag: 'Front-End',
-			tech: [
-				'ReactJs',
-				'NodeJs',
-				'Firebase',
-				'Healthcare',
-				'ReactJs',
-				'NodeJs',
-				'Firebase',
-				'Healthcare',
+			tag: 'React Js',
+			tech: ['ReactJs', 'NodeJs', 'Bootstrap'],
+			image: [
+				require('assets/images/portfolio/mern.png').default,
+				require('assets/images/portfolio/mern2.png').default,
 			],
-			image: [require('assets/images/portfolio/mern.png').default],
 			title: 'Staycation',
 			caption: 'Tech: ReactJs, Bootstrap 4',
 			description:
@@ -141,19 +135,10 @@ const data = {
 			],
 		},
 		{
-			tag: 'Back-End',
+			tag: 'Node Js',
 			image: [require('assets/images/portfolio/nodeJs.png').default],
 			title: 'Staycation-Admin',
-			tech: [
-				'ReactJs',
-				'NodeJs',
-				'Firebase',
-				'Healthcare',
-				'ReactJs',
-				'NodeJs',
-				'Firebase',
-				'Healthcare',
-			],
+			tech: ['ReactJs', 'NodeJs', 'MongoDb', 'Healthcare', 'Firebase'],
 			caption: 'Tech: NodeJs/ExpressJs',
 			description:
 				'This project was built using ReactJs, NodeJs/ExpressJs, Mocha Chai, Bootstrap 4, Sass and Multer.\n Username: admin || Password: rahasia',
@@ -164,6 +149,26 @@ const data = {
 				},
 				{
 					link: 'https://github.com/tirwanda/server-staycation',
+					icon: <GitHubIcon />,
+				},
+			],
+		},
+		{
+			tag: 'Python',
+			image: [
+				require('assets/images/portfolio/python000.png').default,
+				require('assets/images/portfolio/python001.png').default,
+				require('assets/images/portfolio/python002.png').default,
+				require('assets/images/portfolio/python003.png').default,
+			],
+			title: 'Face Mask Detection',
+			tech: ['Python', 'OpenCv', 'TensorFlow'],
+			caption: 'Tech: Python, OpenCv, TensorFlow',
+			description:
+				'This project was built using Python, OpenCv and TensorFlow',
+			links: [
+				{
+					link: 'https://github.com/tirwanda/face-mask-detection',
 					icon: <GitHubIcon />,
 				},
 			],

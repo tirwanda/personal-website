@@ -92,7 +92,7 @@ function Projects() {
 												<CardActionArea>
 													<CardMedia
 														className="custom-card-image"
-														image={project.image}
+														image={project.image[0]}
 														title={project.title}
 													/>
 													<CardContent>
