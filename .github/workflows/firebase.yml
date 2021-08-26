@@ -28,7 +28,7 @@ jobs:
         needs: build
         runs-on: ubuntu-latest
         steps: 
-            - uses: actions/upload-artifac@v1
+            - uses: actions/download-artifac@v1
             - name: Download Build
                 uses: actions/checkout@v1
                 with: 
