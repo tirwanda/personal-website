@@ -19,6 +19,7 @@ import './resumePortfolio.scss';
 
 import ResumeData from 'util/resumeData';
 import ImageGallery from 'elements/ImageGallery/ImageGallery';
+import { Fragment } from 'react';
 
 function ResumePortfolio() {
 	const [tabValue, setTabValue] = useState('All');
@@ -35,9 +36,10 @@ function ResumePortfolio() {
 				<Grid item xs={12}>
 					<Tabs
 						value={tabValue}
-						indicatorColor="white"
+						indicatorColor="primary"
 						className="custom-tabs"
 						onChange={(event, newValue) => setTabValue(newValue)}
+						style={{ marginBottom: '2rem' }}
 					>
 						<Tab
 							label="All"
@@ -70,16 +72,16 @@ function ResumePortfolio() {
 
 				<Grid item xs={12}>
 					<Grid container spacing={2}>
-						{ResumeData.portfolio.map((project) => (
-							<>
+						{ResumeData.portfolio.map((project, index) => (
+							<Fragment key={index}>
 								{tabValue === project.tag ||
 								tabValue === 'All' ? (
 									<Grid
 										item
 										key={project.title}
 										xs={12}
-										sm={6}
-										md={4}
+										md={6}
+										lg={4}
 									>
 										<Grow in timeout={1000}>
 											<Card
@@ -110,7 +112,7 @@ function ResumePortfolio() {
 										</Grow>
 									</Grid>
 								) : null}
-							</>
+							</Fragment>
 						))}
 					</Grid>
 				</Grid>

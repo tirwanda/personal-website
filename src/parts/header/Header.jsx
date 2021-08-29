@@ -24,8 +24,6 @@ function Header({ history }) {
 		return () => window.onscroll == null;
 	};
 
-	console.log(window.pageYOffset);
-
 	// State for page changes
 	useEffect(() => {
 		history.listen(() => {

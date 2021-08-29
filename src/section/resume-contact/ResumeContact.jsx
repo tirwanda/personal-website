@@ -85,7 +85,7 @@ function ResumeContact() {
 					<Grid item xs={12}>
 						<Grid container className="contact-socials-container">
 							{Object.keys(ResumeData.socials).map((key) => (
-								<Grid item className="social-icon">
+								<Grid item className="social-icon" key={key}>
 									<a href={ResumeData.socials[key].link}>
 										{ResumeData.socials[key].icon}
 									</a>

@@ -214,12 +214,7 @@ export default function Hamburger({ state }) {
 									</Grid>
 								</Grid>
 							</Grid>
-							<Grid
-								container
-								sm={12}
-								md={12}
-								className="achievement"
-							>
+							<Grid container className="achievement">
 								Achievement :
 								{achievement.map((el) => (
 									<span

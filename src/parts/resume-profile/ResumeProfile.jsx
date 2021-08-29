@@ -7,6 +7,7 @@ import CustomeTimeline, {
 	CustomTimelineSeparator,
 } from 'parts/resume-timeline/ResumeTimeline';
 import Profile from 'assets/images/profile.jpg';
+import myCv from 'assets/files/edho-dwi-tirwanda.pdf';
 
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import GetAppIcon from '@material-ui/icons/GetApp';
@@ -69,11 +70,13 @@ function ResumeProfile() {
 				</CustomeTimeline>
 
 				<div className="btn-container">
-					<Button
-						className="btn-download"
-						text="Download CV"
-						icon={<GetAppIcon />}
-					></Button>
+					<a href={myCv} target="_blank" rel="noopener noreferrer">
+						<Button
+							className="btn-download"
+							text="Download CV"
+							icon={<GetAppIcon />}
+						></Button>
+					</a>
 				</div>
 			</div>
 		</div>

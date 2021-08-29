@@ -83,6 +83,7 @@ function ResumeHeader(props) {
 						</a>
 					))}
 					<ResumeButton
+						link="/resume/contact"
 						className="btn-download"
 						text="Hire Me"
 						icon={<TelegramIcon />}

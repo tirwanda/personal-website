@@ -21,6 +21,7 @@ import {
 import ResumeData from 'util/resumeData';
 import ImageGallery from 'elements/ImageGallery/ImageGallery';
 import HomeTitle from 'elements/home-title/HomeTitle';
+import { Fragment } from 'react';
 
 function Projects() {
 	const [tabValue, setTabValue] = useState('All');
@@ -71,16 +72,16 @@ function Projects() {
 				</Grid>
 				<Grid item xs={12}>
 					<Grid container spacing={2}>
-						{ResumeData.portfolio.map((project) => (
-							<>
+						{ResumeData.portfolio.map((project, index) => (
+							<Fragment key={index}>
 								{tabValue === project.tag ||
 								tabValue === 'All' ? (
 									<Grid
 										item
 										key={project.title}
 										xs={12}
-										sm={6}
-										md={4}
+										md={6}
+										lg={4}
 									>
 										<Grow in timeout={1000}>
 											<Card
@@ -111,7 +112,7 @@ function Projects() {
 										</Grow>
 									</Grid>
 								) : null}
-							</>
+							</Fragment>
 						))}
 					</Grid>
 				</Grid>

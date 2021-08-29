@@ -37,8 +37,8 @@ function ResumeAchievment() {
 								item
 								key={achievment.title}
 								xs={12}
-								sm={6}
-								md={4}
+								md={6}
+								lg={4}
 							>
 								<Grow in timeout={1000}>
 									<Card
