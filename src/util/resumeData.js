@@ -13,10 +13,10 @@ import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
 const data = {
 	name: 'Edho Dwi Tirwanda',
 	title: 'Software Developer',
-	birthday: '08 June 1997',
+	birthday: 'June 1997',
 	email: 'edhodwitirwanda@gmail.com',
-	address: 'JL Perintis 4, Bekasi, 17124',
-	phone: '+6285889644070',
+	address: 'Kota Bekasi',
+	phone: '-',
 
 	socials: {
 		Facebook: {
