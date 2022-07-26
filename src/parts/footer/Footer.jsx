@@ -8,9 +8,9 @@ function Footer() {
 		<div className="home-footer">
 			<div className="container section-footer">
 				<p>
-					I makeas soon as possibale.You really like my work,if you
-					don&#8217;t i change this until you like I give you
-					seticfaction result
+					I can complete projects quickly according to needs, and if
+					the results are not suitable, I will correct them until the
+					client gets a satisfactory result
 				</p>
 				<div className="social-icons">
 					{Object.keys(resumeData.socials).map((key) => (
