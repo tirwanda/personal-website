@@ -2,7 +2,7 @@ import React from 'react';
 import Typed from 'react-typed';
 import './about.scss';
 
-import myCv from 'assets/files/edho-dwi-tirwanda.pdf';
+import myCv from 'assets/files/resume-web.pdf';
 
 import elforza18 from 'assets/images/elforza18.jpg';
 import { Grid } from '@material-ui/core';

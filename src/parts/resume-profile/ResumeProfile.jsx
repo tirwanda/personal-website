@@ -7,7 +7,7 @@ import CustomeTimeline, {
 	CustomTimelineSeparator,
 } from 'parts/resume-timeline/ResumeTimeline';
 import Profile from 'assets/images/profile.jpg';
-import myCv from 'assets/files/edho-dwi-tirwanda.pdf';
+import myCv from 'assets/files/resume-web.pdf';
 
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import GetAppIcon from '@material-ui/icons/GetApp';
